@@ -42,7 +42,7 @@ header p {
 .form-group {
     display: flex;
     flex-direction: column;
-    gap: 1em;
+    gap: 0.35em;
     border-radius: 6px;
 }
 
@@ -88,6 +88,7 @@ header p {
 .contact-form textarea {
     resize: vertical;
     min-height: 67px;
+    height: stretch;
 }
 
 .contact-form input:focus,

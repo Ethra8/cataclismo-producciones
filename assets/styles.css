@@ -4,7 +4,7 @@ body {
 }
 
 body {
-    background: url('/assets/images/under_construction_2.jpg') no-repeat center center fixed;
+    background: url('/assets/images/under_construction.jpg') no-repeat center center fixed;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -50,7 +50,7 @@ footer a {
 @media (max-width: 768px) {
 
     body {
-        background: url('/assets/images/under_construction_tablet.jpg') no-repeat center center fixed;
+        background: url('/assets/images/under_construction.jpg') no-repeat top left fixed;
     }
 
     h1 {
@@ -74,7 +74,7 @@ footer a {
 @media (max-width: 360px) {
 
     body {
-        background: url('/assets/images/under_construction_mobile.jpg') no-repeat center center fixed;
+        background: url('/assets/images/under_construction.jpg') no-repeat top right fixed;
     }
 
     header p {

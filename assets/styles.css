@@ -1,5 +1,13 @@
+html,
+body {
+    min-height: 100%;
+}
+
 body {
     background: url('/assets/images/under_construction_2.jpg') no-repeat center center fixed;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 h1 {
@@ -15,5 +23,17 @@ header p {
     text-align: right;
     font-family: 'Arial', sans-serif;
     font-size: 2em;
+    margin: 0 5%;
+}
+
+main {
+    flex: 1;
+}
+
+footer p {
+    color: whitesmoke;
+    text-align: right;
+    font-family: 'Arial', sans-serif;
+    font-size: 1.2em;
     margin: 0 5%;
 }

@@ -22,18 +22,26 @@
 <body>
 
     <nav>
-        <a class="nav-logo" href="{% url 'home' %}">Cataclismo</a>
+        <a class="nav-logo" href="{% url 'home' %}">
+            <img src="{% static 'images/cataclismo_logo_red_rectangle.jpg' %}" alt="Cataclismo Producciones Logo" width="120">
+        </a>
 
         <div>
-            {% block nav_links %}
-            {% endblock %}
+            <ul class="nav-links">
+                <li><a href="#">Gestión <small>de</small> Eventos</a></li>
+                <li><a href="#">Promoción artística</a></li>
+                <li><a href="#">Desarrollo Web</a></li>
+                <li><a href="#">Booking & Management</a></li> 
+                {% block nav_links %}
+                {% endblock %}
+            </ul>
         </div>
     </nav>
 
     {% block messages %}
         {% include "components/messages.html" %}
     {% endblock %}
-    
+
     <main>
         {% block content %}
         {% endblock %}

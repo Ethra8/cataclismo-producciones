@@ -7,6 +7,10 @@
 <link rel="stylesheet" href="{% static 'home/css/home.css' %}">
 {% endblock %}
 
+
+{% block messages %}{% endblock %}
+
+
 {% block content %}
 <section class="home-page">
     <header class="home-header">
@@ -27,20 +31,49 @@
             <input type="email" id="email" name="email" required>
         </div>
 
+        <fieldset class="form-group form-options">
+            <legend>¿En qué servicio estás interesado/a?</legend>
+
+            <label class="checkbox-option">
+                <input type="checkbox" name="services" value="gestion_produccion_evento">
+                <span>Gestión de Evento</span>
+            </label>
+
+            <label class="checkbox-option">
+                <input type="checkbox" name="services" value="promocion_difusion_artistica">
+                <span>Promoción artística</span>
+            </label>
+
+            <label class="checkbox-option">
+                <input type="checkbox" name="services" value="desarrolo_web">
+                <span>Desarrollo Web</span>
+            </label>
+
+            <label class="checkbox-option">
+                <input type="checkbox" name="services" value="booking">
+                <span>Booking & Management</span>
+            </label>
+        </fieldset>
+
         <div class="form-group">
             <label for="message">Mensaje</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
+            <textarea id="message" name="message" rows="4"></textarea>
+        </div>
+
+        <div class="form-messages">
+            {% include "components/messages.html" %}
         </div>
 
         <button type="submit">Enviar mensaje</button>
+
     </form>
 
     <p class="photo-credit">Foto de <a href="https://www.pexels.com/es-es/foto/blanco-y-negro-pared-muro-acera-10400443/" target="_blank" rel="noopener noreferrer">Mackenzie Lark</a></p>
+
 </section>
 
-{% if messages %}
-    {% for message in messages %}
-        <p>{{ message }}</p>
-    {% endfor %}
-{% endif %}
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'home/js/home.js' %}"></script>
 {% endblock %}

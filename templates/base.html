@@ -30,6 +30,10 @@
         </div>
     </nav>
 
+    {% block messages %}
+        {% include "components/messages.html" %}
+    {% endblock %}
+    
     <main>
         {% block content %}
         {% endblock %}
@@ -37,11 +41,13 @@
 
     <footer>
         <p>&copy; {% now "Y" %} Cataclismo Producciones</p>
+        <p class="footer-developer">Diseño y desarrollo por <a href="https://github.com/Ethra8" target="_blank">Edna T.Munill</a></p>
 
         {% block footer_extra %}
         {% endblock %}
     </footer>
 
+    <script src="{% static 'js/base.js' %}"></script>
     {% block extra_js %}{% endblock %}
 
 </body>

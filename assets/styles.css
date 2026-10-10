@@ -31,7 +31,7 @@ main {
 }
 
 footer p {
-    color: lightgray;
+    color: gray;
     text-align: right;
     font-family: 'Arial', sans-serif;
     font-size: 0.75em;
@@ -39,7 +39,7 @@ footer p {
 }
 
 footer a {
-    color: lightgray;
+    color: gray;
     text-decoration: none;
     font-family: 'Arial', sans-serif;
     font-weight: 600;

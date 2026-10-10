@@ -2,7 +2,7 @@ import logging
 
 from django.conf import settings
 from django.contrib import messages
-from django.core.mail import send_mail
+from django.core.mail import EmailMessage
 from django.shortcuts import redirect, render
 
 
@@ -20,13 +20,14 @@ def home(request):
             return redirect("home")
 
         try:
-            send_mail(
+            email_message = EmailMessage(
                 subject=f"Nuevo contacto: {name}",
-                message=message,
+                body=message,
                 from_email=settings.DEFAULT_FROM_EMAIL,
-                recipient_list=[settings.CONTACT_EMAIL],
+                to=[settings.CONTACT_EMAIL],
                 reply_to=[email],
             )
+            email_message.send()
         except Exception:
             logger.exception("Error sending contact form email")
             messages.error(

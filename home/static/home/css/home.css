@@ -6,7 +6,7 @@
 }
 
 body {
-    background: url("../images/under_construction.png") no-repeat center center fixed;
+    background: url("../images/under_construction.png") no-repeat top -50px left fixed;
 }
 
 
@@ -16,6 +16,7 @@ h1 {
     font-family: Arial, sans-serif;
     font-size: 3.5em;
     margin: 5% 5% 27px;
+    text-shadow: 2px 3px 4px rgba(0, 0, 0, 0.75);
 }
 
 header p {
@@ -29,7 +30,7 @@ header p {
 .contact-form {
     display: grid;
     grid-template-columns: repeat(2, 1fr);    /* width: min(100%, 360px); */
-    margin: 50px 5% 46px auto;
+    margin: 190px 5% 46px auto;
     padding: 28px;
     flex-direction: column;
     gap: 2rem;
@@ -218,19 +219,42 @@ header p {
 /*** RESPONSIVE ***************************************************************/
 
 @media (max-width: 1024px) {
+
+    body {
+        background-position: top -50px left -100px;
+    }
+
     .contact-form {
         display: flex;
+        margin: 260px 5% 60px auto;
         flex-direction: column;
+        width: 50%;
+    }
+}
+
+@media (max-width: 992px) {
+    body {
+        background-position: top left -100px;
+    }
+
+    .contact-form {
+        width: 70%;
     }
 }
 
 @media (max-width: 768px) {
-    body {
-        background-position: top left;
+
+    .photo-credit,
+    .photo-credit a {
+        color: rgb(219, 219, 219);
     }
 
-    .contact-form {
-        margin: 40px 5% 70px auto;
+}
+
+
+@media (max-width: 661px) {
+    body {
+        background-position: top left -100px;
     }
 
     .photo-credit,
@@ -241,7 +265,17 @@ header p {
 }
 
 
+
 @media (max-width: 566.98px) {
+    body {
+        background-position: top left -70px;
+        background-size: cover;
+    }
+
+    h1 {
+        font-size: 2.5em;
+        margin: 10% 5% 20px;
+    }
 
     .contact-form {
         width: auto;
@@ -250,15 +284,30 @@ header p {
 }
 
 
-@media (max-width: 360px) {
+@media (max-width: 456px) {
     body {
-        background-position: bottom right;
+        background-position: top left -90px;
+        background-size: cover;
     }
 
     h1 {
-        font-size: 2.5em;
-        margin: 5% 5% 20px;
+        font-size: 2.2em;
+        margin: 10% 5% 20px;
     }
+
+    .contact-form {
+        width: 100%;
+    }
+
+}
+
+
+@media (max-width: 360px) {
+    body {
+        background-position: top left -110px;
+        /* background-size: cover; */
+    }
+
 
     header p {
         font-size: 1.2em;

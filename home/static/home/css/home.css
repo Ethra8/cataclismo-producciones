@@ -14,7 +14,7 @@ h1 {
     color: whitesmoke;
     text-align: right;
     font-family: Arial, sans-serif;
-    font-size: 3.5em;
+    font-size: 3.9em;
     margin: 5% 5% 27px;
     text-shadow: 2px 3px 4px rgba(0, 0, 0, 0.75);
 }
@@ -30,7 +30,7 @@ header p {
 .contact-form {
     display: grid;
     grid-template-columns: repeat(2, 1fr);    /* width: min(100%, 360px); */
-    margin: 190px 5% 46px auto;
+    margin: 210px 5% 46px auto;
     padding: 28px;
     flex-direction: column;
     gap: 2rem;
@@ -238,7 +238,8 @@ header p {
     }
 
     .contact-form {
-        width: 70%;
+        width: 60%;
+        max-width: 380px;
     }
 }
 
@@ -272,6 +273,13 @@ header p {
         background-size: cover;
     }
 
+    .home-page {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        padding: 0 2%;
+    }
+
     h1 {
         font-size: 2.5em;
         margin: 10% 5% 20px;
@@ -279,6 +287,7 @@ header p {
 
     .contact-form {
         width: auto;
+        margin: 260px auto 60px;
     }
 
 }
@@ -295,9 +304,9 @@ header p {
         margin: 10% 5% 20px;
     }
 
-    .contact-form {
+    /* .contact-form {
         width: 100%;
-    }
+    } */
 
 }
 

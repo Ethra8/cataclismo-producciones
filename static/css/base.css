@@ -20,7 +20,7 @@ nav {
     flex-direction: row;
     min-height: 88px;
     padding: 0 2.5em;
-    background-color: rgba(10, 10, 10, .65);
+    background-color: rgba(245, 245, 245, .15);
     backdrop-filter: blur(6px);
 }
 

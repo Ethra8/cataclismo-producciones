@@ -27,10 +27,10 @@ body::before {
     flex-direction: column;
     align-items: flex-end;
     justify-content: center;
-    background: rgba(10, 10, 10, 0.15);
+    background: rgba(10, 10, 10, 0.45);
     width: 100%;
     box-sizing: border-box;
-    padding: 10px 20px;
+    padding: 46px 20px;
     box-shadow: 5px 5px 5px 10px rgba(10, 10, 10, 0.2);
     border-radius: 4px;
     margin: 40px 0 27px auto;
@@ -39,8 +39,10 @@ body::before {
 h1 {
     color: whitesmoke;
     text-align: right;
-    font-family: Arial, sans-serif;
-    font-size: 3.9em;
+    font-family: "Zen Dots", sans-serif;
+    font-size: 3em;
+    font-weight: 400;
+    letter-spacing: 0.1em;
     text-shadow: 2px 3px 4px rgba(0, 0, 0, 0.75);
     margin: 0 5% 0 auto;
     line-height: 1.2em;
@@ -56,8 +58,8 @@ header p {
 
 .contact-form {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);    /* width: min(100%, 360px); */
-    margin: 120px 5% 46px auto;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 80px 5% 46px auto;
     padding: 28px;
     flex-direction: column;
     gap: 2rem;
@@ -326,11 +328,10 @@ header p {
         flex: 1;
         display: flex;
         flex-direction: column;
-        padding: 0 2%;
     }
 
     h1 {
-        font-size: 3.2em;
+        font-size: 2.5em;
     }
 
     .contact-form {
@@ -343,7 +344,12 @@ header p {
 
 @media (max-width: 456px) {
     body::before {
-        background-position: top left -90px;
+        background-position: top -100px left -90px;    
+    }
+
+    .home-header {
+        border-radius: 0;
+        margin: 240px 0 27px auto;
     }
 
     h1 {

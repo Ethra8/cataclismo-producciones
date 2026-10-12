@@ -67,7 +67,7 @@ h2 {
     width: 100%;
 }
 
-p:first-of-type {
+.home-description p {
     color: whitesmoke;
     text-align: right;
     font-family: "Iceland", sans-serif;
@@ -290,13 +290,12 @@ p:first-of-type {
 @media (max-width: 1200px) {
     body::before {
         background-position: top left -100px;
+        background-size: 200% auto;    
     }
 
     .contact-form-grid {
         display: flex;
-        /* margin: 120px 5% 60px auto; */
         flex-direction: column;
-        /* width: 50%; */
     }
 
 }
@@ -313,8 +312,8 @@ p:first-of-type {
 
 @media (max-width: 992px) {
     body::before {
-        background-position: top left -90px;
-        background-size: 170% auto;
+        background-position: top -260px left -90px;
+        background-size: 270% auto;
     }
 
     .home-header {

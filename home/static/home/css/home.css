@@ -1,22 +1,49 @@
 
+body {
+    position: relative;
+    background: none;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100lvh;
+    background: url("../images/under_construction_proximamente.png") no-repeat top left;
+    background-size: cover;
+    z-index: -1;
+}
+
 .home-page {
     flex: 1;
     display: flex;
     flex-direction: column;
 }
 
-body {
-    background: url("../images/under_construction.png") no-repeat top -50px left fixed;
+.home-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    background: rgba(10, 10, 10, 0.15);
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    box-shadow: 5px 5px 5px 10px rgba(10, 10, 10, 0.2);
+    border-radius: 4px;
+    margin: 40px 0 27px auto;
 }
-
 
 h1 {
     color: whitesmoke;
     text-align: right;
     font-family: Arial, sans-serif;
     font-size: 3.9em;
-    margin: 5% 5% 27px;
     text-shadow: 2px 3px 4px rgba(0, 0, 0, 0.75);
+    margin: 0 5% 0 auto;
+    line-height: 1.2em;
 }
 
 header p {
@@ -30,14 +57,15 @@ header p {
 .contact-form {
     display: grid;
     grid-template-columns: repeat(2, 1fr);    /* width: min(100%, 360px); */
-    margin: 210px 5% 46px auto;
+    margin: 120px 5% 46px auto;
     padding: 28px;
     flex-direction: column;
     gap: 2rem;
-    background: rgba(143, 37, 37, 0.8);
+    background: rgba(143, 37, 37, 0.6);
     border: 1px solid rgba(255, 255, 255, 0.18);
     border-radius: 4px;
     backdrop-filter: blur(6px);
+    width: 40%;
 }
 
 .form-group {
@@ -218,23 +246,34 @@ header p {
 
 /*** RESPONSIVE ***************************************************************/
 
-@media (max-width: 1024px) {
-
-    body {
-        background-position: top -50px left -100px;
+@media (max-width: 1200px) {
+    body::before {
+        background-position: top left -100px;
     }
 
     .contact-form {
         display: flex;
-        margin: 260px 5% 60px auto;
+        margin: 120px 5% 60px auto;
         flex-direction: column;
         width: 50%;
     }
+
 }
 
+
+@media (max-width: 1024px) {
+
+    body::before {
+            background-position: top left -90px;
+            background-size: 150% auto;
+    }
+}
+
+
 @media (max-width: 992px) {
-    body {
-        background-position: top left -100px;
+    body::before {
+        background-position: top left -90px;
+        background-size: 170% auto;
     }
 
     .contact-form {
@@ -243,7 +282,11 @@ header p {
     }
 }
 
+
 @media (max-width: 768px) {
+    body::before {
+        background-size: 210% auto;
+    }
 
     .photo-credit,
     .photo-credit a {
@@ -254,8 +297,13 @@ header p {
 
 
 @media (max-width: 661px) {
-    body {
-        background-position: top left -100px;
+    body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background: url("../images/under_construction_proximamente_mobile_638x956px.png") no-repeat left top;
+        background-size: 230% auto;
+        z-index: -1;
     }
 
     .photo-credit,
@@ -268,9 +316,10 @@ header p {
 
 
 @media (max-width: 566.98px) {
-    body {
+    body::before {
         background-position: top left -70px;
         background-size: cover;
+        background-attachment: scroll;
     }
 
     .home-page {
@@ -281,8 +330,7 @@ header p {
     }
 
     h1 {
-        font-size: 2.5em;
-        margin: 10% 5% 20px;
+        font-size: 3.2em;
     }
 
     .contact-form {
@@ -294,29 +342,19 @@ header p {
 
 
 @media (max-width: 456px) {
-    body {
+    body::before {
         background-position: top left -90px;
-        background-size: cover;
     }
 
     h1 {
-        font-size: 2.2em;
-        margin: 10% 5% 20px;
+        font-size: 2.8em;
     }
 
-    /* .contact-form {
-        width: 100%;
-    } */
 
 }
 
 
 @media (max-width: 360px) {
-    body {
-        background-position: top left -110px;
-        /* background-size: cover; */
-    }
-
 
     header p {
         font-size: 1.2em;

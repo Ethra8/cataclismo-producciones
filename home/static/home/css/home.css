@@ -266,8 +266,8 @@ header p {
 @media (max-width: 1024px) {
 
     body::before {
-            background-position: top left -90px;
-            background-size: 150% auto;
+        background-position: top left -90px;
+        background-size: 150% auto;
     }
 }
 
@@ -330,13 +330,17 @@ header p {
         flex-direction: column;
     }
 
+    .home-header {
+        padding: 36px 20px;
+    }
+
     h1 {
         font-size: 2.5em;
     }
 
     .contact-form {
         width: auto;
-        margin: 260px auto 60px;
+        margin: 60px auto 60px;
     }
 
 }
@@ -344,7 +348,7 @@ header p {
 
 @media (max-width: 456px) {
     body::before {
-        background-position: top -100px left -90px;    
+        background-position: top left -90px;    
     }
 
     .home-header {
@@ -353,7 +357,7 @@ header p {
     }
 
     h1 {
-        font-size: 2.8em;
+        font-size: 2em;
     }
 
 

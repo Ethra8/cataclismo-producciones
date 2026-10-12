@@ -27,11 +27,11 @@ body::before {
     flex-direction: column;
     align-items: flex-end;
     justify-content: center;
-    background: rgba(10, 10, 10, 0.45);
+    background: rgba(10, 10, 10, 0.35);
     width: 100%;
     box-sizing: border-box;
-    padding: 46px 20px;
-    box-shadow: 5px 5px 5px 10px rgba(10, 10, 10, 0.2);
+    padding: 36px 0;
+    box-shadow: 5px 5px 5px 10px rgba(10, 10, 10, 0.35);
     border-radius: 4px;
     margin: 40px 0 27px auto;
 }
@@ -40,7 +40,7 @@ h1 {
     color: whitesmoke;
     text-align: right;
     font-family: "Zen Dots", sans-serif;
-    font-size: 3em;
+    font-size: 3.5em;
     font-weight: 400;
     letter-spacing: 0.1em;
     text-shadow: 2px 3px 4px rgba(0, 0, 0, 0.75);
@@ -49,28 +49,35 @@ h1 {
 }
 
 h2 {
-    color: whitesmoke;
+    color: rgb(211, 209, 209);
     text-align: center;
     font-family: "Zen Dots", sans-serif;
     font-size: 1.5em;
     font-weight: 400;
     letter-spacing: 0.1em;
     text-shadow: 2px 3px 4px rgba(0, 0, 0, 0.75);
-    margin: 0 5% 0 auto;
+    margin: 0;
     line-height: 1.2em;
 }
 
-header p {
+.home-description {
+    background: rgba(10, 10, 10, 0.35);
+    box-shadow: 5px 5px 5px 10px rgba(10, 10, 10, 0.35);
+    padding: 1em 0;
+    width: 100%;
+}
+
+p:first-of-type {
     color: whitesmoke;
     text-align: right;
-    font-family: Arial, sans-serif;
-    font-size: 2em;
+    font-family: "Iceland", sans-serif;
+    font-size: 1.8em;
+    font-weight: 400;
+    line-height: 1.2em;
     margin: 0 5%;
 }
 
 .contact-form {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
     margin: 80px 5% 46px auto;
     padding: 28px;
     flex-direction: column;
@@ -80,6 +87,13 @@ header p {
     border-radius: 4px;
     backdrop-filter: blur(6px);
     width: 40%;
+}
+
+.contact-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding-top: 1.5em;
 }
 
 .form-group {
@@ -98,20 +112,19 @@ header p {
 
 .contact-form legend {
     color: whitesmoke;
-    font-family: Arial, sans-serif;
-    font-size: 0.8em;
-    font-weight: 600;
+    font-family: "Iceland", sans-serif;
+    font-size: 1.4em;
+    font-weight: 500;
     letter-spacing: 0.08em;
-    text-transform: uppercase;
 }
 
 .contact-form label {
     color: rgba(245, 245, 245, 0.9);
-    font-family: Arial, sans-serif;
-    font-size: 0.75rem;
-    font-weight: 600;
+    font-family: "Iceland", sans-serif;
+    font-size: 1.4em;
+    font-weight: 500;
     letter-spacing: 0.08em;
-    text-transform: uppercase;
+    text-transform: capitalize;
 }
 
 .contact-form input,
@@ -157,7 +170,7 @@ header p {
 
 .form-group i {
     text-transform: lowercase;
-    font-size: 0.75rem;
+    font-size: 0.8em;
     font-weight: 400;
 }
 
@@ -186,9 +199,9 @@ header p {
 .checkbox-option input[type="checkbox"]:checked::after {
     content: "✓";
     display: block;
-    color: #571818;
-    font-size: 18px;
-    margin-top: -7px;
+    color: #1d0808;
+    font-size: 22px;
+    margin-top: -9px;
     margin-left: -6px;
     font-weight: 900;
     line-height: 11px;
@@ -208,9 +221,9 @@ header p {
     align-self: flex-end;
     padding: 10px 18px;
     color: whitesmoke;
-    font-family: Arial, sans-serif;
-    font-size: 0.8rem;
-    font-weight: 700;
+    font-family: "Zen Dots", sans-serif;
+    font-size: 0.9em;
+    font-weight: 400;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     background: rgba(10, 10, 10, 0.7);
@@ -279,11 +292,11 @@ header p {
         background-position: top left -100px;
     }
 
-    .contact-form {
+    .contact-form-grid {
         display: flex;
-        margin: 120px 5% 60px auto;
+        /* margin: 120px 5% 60px auto; */
         flex-direction: column;
-        width: 50%;
+        /* width: 50%; */
     }
 
 }
@@ -304,6 +317,21 @@ header p {
         background-size: 170% auto;
     }
 
+    .home-header {
+        /* background: rgba(119, 32, 32, 0.65);
+        box-shadow: 5px 5px 5px 10px rgba(119, 32, 32, 0.65); */
+        margin: 340px 0 27px auto;
+        backdrop-filter: blur(6px);
+    }
+
+    .home-description {
+        /* background: rgba(10, 10, 10, 0.75);
+        box-shadow: 5px 5px 5px 10px rgba(10, 10, 10, 0.75); */
+        box-sizing: border-box;
+        width: auto;
+        backdrop-filter: blur(6px);
+    }
+
     .contact-form {
         width: 60%;
         max-width: 380px;
@@ -316,6 +344,9 @@ header p {
         background-size: 210% auto;
     }
 
+    h1 {
+        font-size: 3em;
+    }
     .photo-credit,
     .photo-credit a {
         color: rgb(219, 219, 219);
@@ -379,10 +410,10 @@ header p {
         background-size: 350% auto;
     }
 
-    .home-header {
+    /* .home-header {
         border-radius: 0;
         margin: 240px 0 27px auto;
-    }
+    } */
 
     h1 {
         font-size: 2em;

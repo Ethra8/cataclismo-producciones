@@ -286,10 +286,6 @@ header p {
 /*** RESPONSIVE ***************************************************************/
 
 @media (max-width: 1200px) {
-    body::before {
-        background-position: top left -100px;
-    }
-
     .contact-form {
         gap: 0.5rem;
     }
@@ -307,15 +303,6 @@ header p {
 
 
 @media (max-width: 1099.98px) {
-    body::before {
-        background-position: top left -60px;
-    }
-
-    .home-header {
-        margin: 40px 0 27px auto;
-        max-width: 60%;
-    }
-
     h1 {
         font-size: 3em;
     }
@@ -334,10 +321,10 @@ header p {
         background-position: top left;
     }
 
-    .home-header {
+    /* .home-header {
         margin: 40px 0 27px auto;
         max-width: 100%;
-    }
+    } */
 
     h1 {
         font-size: 2.7em;
@@ -360,6 +347,7 @@ header p {
     .home-header {
         padding: 36px 20px 6px;
         margin: 310px 0 27px auto;
+        max-width: 100%;
     }
 
     h1 {
@@ -429,10 +417,10 @@ header p {
 
 
 @media (max-width: 362px) {
-    .home-header {
+    /* .home-header {
         padding: 36px 20px 6px;
         margin: 270px 0 27px auto;
-    }
+    } */
 
     .photo-credit {
         font-size: 0.5em;

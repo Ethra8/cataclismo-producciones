@@ -36,23 +36,11 @@ body::before {
     backdrop-filter: blur(6px);
 }
 
-h1 {
+header h1 {
     color: whitesmoke;
     text-align: right;
     font-family: "Zen Dots", sans-serif;
     font-size: 3.5em;
-    font-weight: 400;
-    letter-spacing: 0.1em;
-    text-shadow: 2px 3px 4px rgba(0, 0, 0, 0.75);
-    margin: 0;
-    line-height: 1.2em;
-}
-
-h2 {
-    color: rgb(211, 209, 209);
-    text-align: center;
-    font-family: "Zen Dots", sans-serif;
-    font-size: 1.5em;
     font-weight: 400;
     letter-spacing: 0.1em;
     text-shadow: 2px 3px 4px rgba(0, 0, 0, 0.75);
@@ -90,6 +78,18 @@ header p {
     width: 40%;
 }
 
+.contact-form h2 {
+    color: rgb(211, 209, 209);
+    text-align: center;
+    font-family: "Zen Dots", sans-serif;
+    font-size: 1.5em;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-shadow: 2px 3px 4px rgba(0, 0, 0, 0.75);
+    margin: 0;
+    line-height: 1.2em;
+}
+
 .contact-form-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -101,7 +101,6 @@ header p {
     display: flex;
     flex-direction: column;
     gap: 0.35em;
-    border-radius: 6px;
 }
 
 .form-options {
@@ -317,11 +316,6 @@ header p {
         background-position: top left;
     }
 
-    /* .home-header {
-        margin: 40px 0 27px auto;
-        max-width: 100%;
-    } */
-
     h1 {
         font-size: 2.7em;
     }
@@ -382,6 +376,7 @@ header p {
 
     .contact-form {
         width: 95%;
+        max-width: 95%;
         margin: 16px auto 60px;
     }
 
@@ -409,11 +404,6 @@ header p {
 
 
 @media (max-width: 362px) {
-    /* .home-header {
-        padding: 36px 20px 6px;
-        margin: 270px 0 27px auto;
-    } */
-
     .photo-credit {
         font-size: 0.5em;
     }

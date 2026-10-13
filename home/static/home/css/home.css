@@ -27,13 +27,14 @@ body::before {
     flex-direction: column;
     align-items: flex-end;
     justify-content: center;
-    background: rgba(10, 10, 10, 0.35);
-    width: 100%;
+    background: rgba(10, 10, 10, 0.45);
+    width: 60%;
     box-sizing: border-box;
-    padding: 36px 0;
-    box-shadow: 5px 5px 5px 10px rgba(10, 10, 10, 0.35);
+    padding: 36px 5% 16px;
+    box-shadow: 5px 5px 5px 10px rgba(10, 10, 10, 0.45);
     border-radius: 4px;
     margin: 40px 0 27px auto;
+    backdrop-filter: blur(6px);
 }
 
 h1 {
@@ -44,7 +45,7 @@ h1 {
     font-weight: 400;
     letter-spacing: 0.1em;
     text-shadow: 2px 3px 4px rgba(0, 0, 0, 0.75);
-    margin: 0 5% 0 auto;
+    margin: 0;
     line-height: 1.2em;
 }
 
@@ -61,28 +62,29 @@ h2 {
 }
 
 .home-description {
-    background: rgba(10, 10, 10, 0.35);
-    box-shadow: 5px 5px 5px 10px rgba(10, 10, 10, 0.35);
+    /* background: rgba(10, 10, 10, 0.35);
+    box-shadow: 5px 5px 5px 10px rgba(10, 10, 10, 0.35); */
     padding: 1em 0;
     width: 100%;
 }
 
-.home-description p {
+header p {
     color: whitesmoke;
     text-align: right;
     font-family: "Iceland", sans-serif;
     font-size: 1.8em;
     font-weight: 400;
     line-height: 1.2em;
-    margin: 0 5%;
+    margin: 0;
 }
 
 .contact-form {
     margin: 80px 5% 46px auto;
     padding: 28px;
+    display: flex;
     flex-direction: column;
-    gap: 2rem;
-    background: rgba(143, 37, 37, 0.6);
+    gap: 1rem;
+    background: rgba(143, 37, 37, 0.75);
     border: 1px solid rgba(255, 255, 255, 0.18);
     border-radius: 4px;
     backdrop-filter: blur(6px);
@@ -92,7 +94,7 @@ h2 {
 .contact-form-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+    gap: 1.5rem;
     padding-top: 1.5em;
 }
 
@@ -290,7 +292,11 @@ h2 {
 @media (max-width: 1200px) {
     body::before {
         background-position: top left -100px;
-        background-size: 200% auto;    
+        background-size: cover;    
+    }
+
+    .contact-form {
+        gap: 0.5rem;
     }
 
     .contact-form-grid {
@@ -298,54 +304,59 @@ h2 {
         flex-direction: column;
     }
 
+    .home-header {
+        margin: 40px 0 27px auto;
+        width: stretch;    
+    }
+
 }
 
 
-@media (max-width: 1024px) {
-
+@media (max-width: 1099.98px) {
     body::before {
         background-position: top left -90px;
-        background-size: 150% auto;
+        background-size: cover;
     }
+
+    .home-header {
+        margin: 40px 0 27px auto;
+    }
+
+    .contact-form {
+        width: 70%;
+        max-width: 460px;
+        margin: 40px 5% 46px auto;
+    }
+
 }
 
 
 @media (max-width: 992px) {
     body::before {
-        background-position: top -260px left -90px;
-        background-size: 270% auto;
-    }
-
-    .home-header {
-        /* background: rgba(119, 32, 32, 0.65);
-        box-shadow: 5px 5px 5px 10px rgba(119, 32, 32, 0.65); */
-        margin: 340px 0 27px auto;
-        backdrop-filter: blur(6px);
-    }
-
-    .home-description {
-        /* background: rgba(10, 10, 10, 0.75);
-        box-shadow: 5px 5px 5px 10px rgba(10, 10, 10, 0.75); */
-        box-sizing: border-box;
-        width: auto;
-        backdrop-filter: blur(6px);
+        background-size: cover;
+        background-position: top left;
     }
 
     .contact-form {
-        width: 60%;
-        max-width: 380px;
+        max-width: 420px;
     }
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 768.98px) {
     body::before {
-        background-size: 210% auto;
+        background-size: cover;
+        background-position: top left -90px;
+    }
+    .home-header {
+        padding: 36px 20px 6px;
+        margin: 310px 0 27px auto;
     }
 
     h1 {
         font-size: 3em;
     }
+
     .photo-credit,
     .photo-credit a {
         color: rgb(219, 219, 219);
@@ -362,11 +373,6 @@ h2 {
         background: url("../images/under_construction_proximamente_mobile_638x956px.png") no-repeat left top;
         background-size: 230% auto;
         z-index: -1;
-    }
-
-    .photo-credit,
-    .photo-credit a {
-        color: rgb(219, 219, 219);
     }
 
 }
@@ -386,10 +392,6 @@ h2 {
         flex-direction: column;
     }
 
-    .home-header {
-        padding: 36px 20px;
-    }
-
     h1 {
         font-size: 2.5em;
     }
@@ -405,27 +407,35 @@ h2 {
 
 @media (max-width: 456px) {
     body::before {
-        background-position: top -30px left -100px;
-        background-size: 350% auto;
+        background-position: top left -80px;
+        background-size: cover;
+        background-attachment: scroll;
     }
 
-    /* .home-header {
-        border-radius: 0;
-        margin: 240px 0 27px auto;
-    } */
+    .home-header {
+        margin: 71% 0 27px auto;
+    }
 
     h1 {
         font-size: 2em;
     }
 
-
-}
-
-
-@media (max-width: 360px) {
     header p {
         font-size: 1.2em;
         margin: 0 5%;
+    }
+}
+
+
+@media (max-width: 362px) {
+    body::before {
+        background-position: top left -90px;
+        background-size: cover;
+    }
+
+    .home-header {
+        padding: 36px 20px 6px;
+        margin: 270px 0 27px auto;
     }
 
     .photo-credit {

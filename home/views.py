@@ -75,3 +75,4 @@ def home(request):
         return redirect("home")
 
     return render(request, "home/index.html")
+

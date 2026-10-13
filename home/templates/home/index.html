@@ -15,18 +15,18 @@
 <section class="home-page">
     <header class="home-header">
         <h1>Cataclismo<br>Producciones</h1>
+        <div class="home-description">
+            <p>Gestión y producción de eventos,<br>proyectos artísticos y culturales.</p>
+        </div>
     </header>
-    <div class="home-description">
-        <p>Gestión y producción de eventos.<br>Proyectos artísticos y culturales.</p>
-    </div>
     <form class="contact-form" method="post">
         {% csrf_token %}
 
-        <h2>Contáctanos ya!</h2>
+        <h2>Pide información<br><small>sin compromiso</small></h2>
 
         <div class="contact-form-grid">
             <fieldset class="form-group form-options">
-                <legend>Pide información sobre:</legend>
+                <legend>¿Qué necesitas?</legend>
 
                 <label class="checkbox-option">
                     <input type="checkbox" name="services" value="gestion_produccion_evento">

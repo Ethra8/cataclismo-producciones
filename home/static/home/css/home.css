@@ -29,7 +29,6 @@ body::before {
     justify-content: center;
     background: rgba(10, 10, 10, 0.45);
     width: 60%;
-    box-sizing: border-box;
     padding: 36px 5% 16px;
     box-shadow: 5px 5px 5px 10px rgba(10, 10, 10, 0.45);
     border-radius: 4px;
@@ -131,8 +130,6 @@ header p {
 
 .contact-form input,
 .contact-form textarea {
-    /* width: 100%; */
-    box-sizing: border-box;
     padding: 11px 12px;
     color: #1b1b1b;
     font-family: Arial, sans-serif;
@@ -146,7 +143,6 @@ header p {
 .contact-form textarea {
     resize: vertical;
     min-height: 67px;
-    height: stretch;
 }
 
 .contact-form input:focus,
@@ -187,11 +183,13 @@ header p {
 
 .checkbox-option input[type="checkbox"] {
     appearance: none;
-    width: 2px;
-    height: 2px;
+    width: 14px;
+    height: 14px;
     margin: 0;
-    padding: 6px;
-    flex: 0 0 13px;
+    padding: 0;
+    flex: 0 0 14px;
+    display: grid;
+    place-items: center;
     background: whitesmoke;
     border: 1px solid whitesmoke;
     border-radius: 2px;
@@ -200,14 +198,12 @@ header p {
 
 .checkbox-option input[type="checkbox"]:checked::after {
     content: "✓";
-    display: block;
     color: #1d0808;
     font-size: 22px;
     margin-top: -9px;
-    margin-left: -6px;
+    margin-left: 0;
     font-weight: 900;
-    line-height: 11px;
-    text-align: center;
+    line-height: 1;
 }
 
 .checkbox-option:has(input:checked) {
@@ -241,7 +237,7 @@ header p {
 }
 
 .photo-credit {
-    color: gray;
+    color: rgb(189, 188, 188);
     text-align: right;
     font-family: Arial, sans-serif;
     font-size: 0.75em;
@@ -249,7 +245,7 @@ header p {
 }
 
 .photo-credit a {
-    color: gray;
+    color: rgb(189, 188, 188);
     text-decoration: none;
     font-weight: 600;
 }
@@ -292,7 +288,6 @@ header p {
 @media (max-width: 1200px) {
     body::before {
         background-position: top left -100px;
-        background-size: cover;    
     }
 
     .contact-form {
@@ -305,8 +300,7 @@ header p {
     }
 
     .home-header {
-        margin: 40px 0 27px auto;
-        width: stretch;    
+        width: 100%;   
     }
 
 }
@@ -314,18 +308,22 @@ header p {
 
 @media (max-width: 1099.98px) {
     body::before {
-        background-position: top left -90px;
-        background-size: cover;
+        background-position: top left -60px;
     }
 
     .home-header {
         margin: 40px 0 27px auto;
+        max-width: 60%;
+    }
+
+    h1 {
+        font-size: 3em;
     }
 
     .contact-form {
         width: 70%;
         max-width: 460px;
-        margin: 40px 5% 46px auto;
+        margin: 140px 5% 46px auto;
     }
 
 }
@@ -333,21 +331,32 @@ header p {
 
 @media (max-width: 992px) {
     body::before {
-        background-size: cover;
         background-position: top left;
+    }
+
+    .home-header {
+        margin: 40px 0 27px auto;
+        max-width: 100%;
+    }
+
+    h1 {
+        font-size: 2.7em;
     }
 
     .contact-form {
         max-width: 420px;
+        margin: 180px 5% 46px auto;
     }
 }
 
 
 @media (max-width: 768.98px) {
     body::before {
+        inset: 0;
+        background: url("../images/under_construction_proximamente_mobile_788x1280px.png") no-repeat center center;
         background-size: cover;
-        background-position: top left -90px;
     }
+
     .home-header {
         padding: 36px 20px 6px;
         margin: 310px 0 27px auto;
@@ -365,32 +374,27 @@ header p {
 }
 
 
-@media (max-width: 661px) {
-    body::before {
-        content: "";
-        position: fixed;
-        inset: 0;
-        background: url("../images/under_construction_proximamente_mobile_638x956px.png") no-repeat left top;
-        background-size: 230% auto;
-        z-index: -1;
+@media (max-width: 667.98px) {
+    .home-header {
+        margin: 30px 0 27px auto;
     }
 
+    h1 {
+        font-size: 2.7em;
+    }
+
+    .contact-form {
+        width: 80%;
+        max-width: 400px;
+        margin: 200px 5% 46px auto;
+    }
 }
 
 
-
 @media (max-width: 566.98px) {
-    body::before {
-        background-position: top left -70px;
-        background-size: cover;
-        background-attachment: scroll;
-    }
-
-    .home-page {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-    }
+    /* body::before {
+        background-position: top center;
+    } */
 
     h1 {
         font-size: 2.5em;
@@ -398,7 +402,6 @@ header p {
 
     .contact-form {
         width: 95%;
-        box-sizing: border-box;
         margin: 16px auto 60px;
     }
 
@@ -406,18 +409,16 @@ header p {
 
 
 @media (max-width: 456px) {
-    body::before {
-        background-position: top left -80px;
-        background-size: cover;
-        background-attachment: scroll;
-    }
-
     .home-header {
-        margin: 71% 0 27px auto;
+        margin: 69% 0 27px auto;
     }
 
     h1 {
         font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.2em;
     }
 
     header p {
@@ -428,11 +429,6 @@ header p {
 
 
 @media (max-width: 362px) {
-    body::before {
-        background-position: top left -90px;
-        background-size: cover;
-    }
-
     .home-header {
         padding: 36px 20px 6px;
         margin: 270px 0 27px auto;

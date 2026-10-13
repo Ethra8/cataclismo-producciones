@@ -17,9 +17,31 @@ body::before {
 }
 
 .home-page {
+    --service-red: #b72828;
+    --service-red-bright: #d33333;
+    --service-white: #f1f1ee;
+    --service-grey: #c5c5c2;
+    --service-muted: #929292;
+    --service-panel: rgba(9, 9, 9, 0.72);
+    --service-border: rgba(255, 255, 255, 0.13);    
     flex: 1;
     display: flex;
     flex-direction: column;
+    margin-top: 88px;
+    position: relative;
+    min-height: 100svh;
+    overflow: hidden;
+    padding: 64px 0 72px;
+    color: var(--service-white);
+    background:
+        /* linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.94) 0%,
+            rgba(0, 0, 0, 0.88) 40%,
+            rgba(0, 0, 0, 0.55) 68%,
+            rgba(0, 0, 0, 0.28) 100%
+        ), */
+        url("../images/under_construction_proximamente.png") center / cover no-repeat;
 }
 
 .home-header {
@@ -40,13 +62,185 @@ body::before {
     color: whitesmoke;
     text-align: right;
     font-family: "Zen Dots", sans-serif;
-    font-size: 3.5em;
+    font-size: clamp(2.8rem, 5.4vw, 5.5rem);
     font-weight: 400;
-    letter-spacing: 0.1em;
+    line-height: 1.03;
+    letter-spacing: 0.02em;
     text-shadow: 2px 3px 4px rgba(0, 0, 0, 0.75);
-    margin: 0;
-    line-height: 1.2em;
+    margin: 0 0 0.5em;
 }
+
+/* .home-page h1 span {
+    display: block;
+    color: var(--service-red-bright);
+}
+ */
+
+
+.home-page h1 .digital-glitch {
+    position: relative;
+    display: inline-block;
+    width: auto;
+    white-space: nowrap;
+    overflow: visible;
+    color: #d33333;
+    isolation: isolate;
+    text-shadow:
+        0 0 10px rgba(211, 51, 51, 0.22),
+        0 0 22px rgba(211, 51, 51, 0.14);
+}
+
+.home-page h1 .digital-glitch::before,
+.home-page h1 .digital-glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    white-space: nowrap;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.home-page h1 .digital-glitch::before {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.home-page h1 .digital-glitch::after {
+    color: rgba(183, 40, 40, 0.95);
+}
+
+.home-page h1 .digital-glitch.is-glitching {
+    animation: digital-flicker 0.12s steps(2, end) 1;
+}
+
+.home-page h1 .digital-glitch.is-glitching::before {
+    opacity: 1;
+    animation: digital-slice-a 0.12s steps(2, end) 1;
+}
+
+.home-page h1 .digital-glitch.is-glitching::after {
+    opacity: 1;
+    animation: digital-slice-b 0.12s steps(2, end) 1;
+}
+
+@keyframes digital-flicker {
+    0% {
+        transform: translateX(0);
+        filter: none;
+    }
+
+    20% {
+        transform: translateX(-3px);
+        filter: brightness(1.15);
+    }
+
+    40% {
+        transform: translateX(4px);
+    }
+
+    60% {
+        transform: translateX(-2px);
+        filter: contrast(1.15);
+    }
+
+    80% {
+        transform: translateX(2px);
+    }
+
+    100% {
+        transform: translateX(0);
+        filter: none;
+    }
+}
+
+@keyframes digital-slice-a {
+    0% {
+        clip-path: inset(0 0 100% 0);
+        transform: translateX(0);
+    }
+
+    15% {
+        clip-path: inset(8% 0 68% 0);
+        transform: translateX(-8px);
+    }
+
+    30% {
+        clip-path: inset(28% 0 48% 0);
+        transform: translateX(6px);
+    }
+
+    45% {
+        clip-path: inset(0 0 100% 0);
+        transform: translateX(0);
+    }
+
+    60% {
+        clip-path: inset(56% 0 22% 0);
+        transform: translateX(-10px);
+    }
+
+    75% {
+        clip-path: inset(74% 0 8% 0);
+        transform: translateX(7px);
+    }
+
+    100% {
+        clip-path: inset(0 0 100% 0);
+        transform: translateX(0);
+    }
+}
+
+@keyframes digital-slice-b {
+    0% {
+        clip-path: inset(0 0 100% 0);
+        transform: translateX(0);
+    }
+
+    20% {
+        clip-path: inset(18% 0 64% 0);
+        transform: translateX(7px);
+    }
+
+    35% {
+        clip-path: inset(38% 0 38% 0);
+        transform: translateX(-6px);
+    }
+
+    50% {
+        clip-path: inset(0 0 100% 0);
+        transform: translateX(0);
+    }
+
+    70% {
+        clip-path: inset(62% 0 18% 0);
+        transform: translateX(10px);
+    }
+
+    85% {
+        clip-path: inset(82% 0 4% 0);
+        transform: translateX(-7px);
+    }
+
+    100% {
+        clip-path: inset(0 0 100% 0);
+        transform: translateX(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .home-page h1 .digital-glitch,
+    .home-page h1 .digital-glitch::before,
+    .home-page h1 .digital-glitch::after {
+        animation: none !important;
+        transform: none !important;
+        filter: none !important;
+    }
+}
+
+
+
 
 .home-description {
     /* background: rgba(10, 10, 10, 0.35);

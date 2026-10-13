@@ -21,7 +21,7 @@
 
       <h1>
         Web y Presencia
-        <span>Digital</span>
+        <span class="digital-glitch" data-text="Digital">Digital</span>
       </h1>
 
       <p class="service-lead">
@@ -30,9 +30,7 @@
       </p>
 
       <p class="service-description">
-        Diseñamos espacios digitales que ayudan a presentar tu proyecto artístico
-        con claridad, personalidad y credibilidad. Desde una web de presentación
-        hasta contenido visual para reforzar tu imagen, trabajamos para que tu
+        Desde una web de presentación y contenido visual para reforzar tu imagen, trabajamos para que tu
         propuesta conecte mejor con salas, promotores y público.
       </p>
 
@@ -52,15 +50,18 @@
             aria-hidden="true"
           >
 
-          <h2>¿Qué incluye?</h2>
+          <h2>¿Qué te proponemos?</h2>
 
         </div>
 
         <ul class="service-list">
-          <li>Diseño web para artistas y bandas</li>
-          <li>Presentación de proyectos, conciertos y dossier</li>
-          <li>Integración de vídeo, música y redes sociales</li>
-          <li>Imagen visual coherente para tu presencia online</li>
+            <li>Presencia online para artistas y bandas</li>
+            <li>Diseño web coherente con tu estilo y filosofía</li>
+            <li>Dominio propio y hosting</li>
+            <li>Email con tu dominio</li>
+            <li>Presentación de proyectos, conciertos y dossier</li>
+            <li>Integración de vídeo, música y redes sociales</li>
+            <li>Venta online de tu <i>merch</i></li>
         </ul>
 
       </article>
@@ -71,7 +72,7 @@
         <div class="service-card-heading">
 
           <img
-            src="{% static 'services/images/icons/people.png' %}"
+            src="{% static 'services/images/icons/target.png' %}"
             alt=""
             class="service-icon"
             aria-hidden="true"
@@ -86,13 +87,14 @@
           <div class="audience-item">
 
             <img
-              src="{% static 'services/images/icons/chart.png' %}"
+              src="{% static 'services/images/icons/electric-guitar.png' %}"
               alt=""
-              class="audience-icon"
+              class=""
               aria-hidden="true"
+              width="46px"
             >
 
-            <span>Bandas emergentes</span>
+            <span>Artistas y bandas emergentes o consolidadas</span>
 
           </div>
 
@@ -100,7 +102,7 @@
           <div class="audience-item">
 
             <img
-              src="{% static 'services/images/icons/megaphone.png' %}"
+              src="{% static 'services/images/icons/megaphone-star.png' %}"
               alt=""
               class="audience-icon"
               aria-hidden="true"
@@ -114,7 +116,7 @@
           <div class="audience-item">
 
             <img
-              src="{% static 'services/images/icons/people.png' %}"
+              src="{% static 'services/images/icons/spotlight.png' %}"
               alt=""
               class="audience-icon"
               aria-hidden="true"
@@ -163,4 +165,8 @@
 
 </section>
 
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'services/js/web_presence.js' %}" defer></script>
 {% endblock %}

@@ -1,0 +1,166 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Web y Presencia Digital | Cataclismo Producciones{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'services/css/web_presence.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<section class="service-page">
+
+  <div class="service-overlay"></div>
+
+  <div class="service-content">
+
+    <div class="service-intro">
+
+      <p class="service-kicker">Servicios</p>
+
+      <h1>
+        Web y Presencia
+        <span>Digital</span>
+      </h1>
+
+      <p class="service-lead">
+        Creamos sitios web y materiales digitales para artistas y bandas
+        que necesitan una presencia profesional, coherente y visible.
+      </p>
+
+      <p class="service-description">
+        Diseñamos espacios digitales que ayudan a presentar tu proyecto artístico
+        con claridad, personalidad y credibilidad. Desde una web de presentación
+        hasta contenido visual para reforzar tu imagen, trabajamos para que tu
+        propuesta conecte mejor con salas, promotores y público.
+      </p>
+
+    </div>
+
+
+    <div class="service-grid">
+
+      <article class="service-card">
+
+        <div class="service-card-heading">
+
+          <img
+            src="{% static 'services/images/icons/web-monitor.png' %}"
+            alt=""
+            class="service-icon"
+            aria-hidden="true"
+          >
+
+          <h2>¿Qué incluye?</h2>
+
+        </div>
+
+        <ul class="service-list">
+          <li>Diseño web para artistas y bandas</li>
+          <li>Presentación de proyectos, conciertos y dossier</li>
+          <li>Integración de vídeo, música y redes sociales</li>
+          <li>Imagen visual coherente para tu presencia online</li>
+        </ul>
+
+      </article>
+
+
+      <article class="service-card">
+
+        <div class="service-card-heading">
+
+          <img
+            src="{% static 'services/images/icons/people.png' %}"
+            alt=""
+            class="service-icon"
+            aria-hidden="true"
+          >
+
+          <h2>Ideal para</h2>
+
+        </div>
+
+        <div class="audience-list">
+
+          <div class="audience-item">
+
+            <img
+              src="{% static 'services/images/icons/chart.png' %}"
+              alt=""
+              class="audience-icon"
+              aria-hidden="true"
+            >
+
+            <span>Bandas emergentes</span>
+
+          </div>
+
+
+          <div class="audience-item">
+
+            <img
+              src="{% static 'services/images/icons/megaphone.png' %}"
+              alt=""
+              class="audience-icon"
+              aria-hidden="true"
+            >
+
+            <span>Artistas en promoción</span>
+
+          </div>
+
+
+          <div class="audience-item">
+
+            <img
+              src="{% static 'services/images/icons/people.png' %}"
+              alt=""
+              class="audience-icon"
+              aria-hidden="true"
+            >
+
+            <span>Proyectos culturales</span>
+
+          </div>
+
+        </div>
+
+      </article>
+
+    </div>
+
+
+    <div class="service-actions">
+
+      <a href="#contacto" class="service-cta">
+        Cuéntanos tu proyecto
+        <span aria-hidden="true">→</span>
+      </a>
+
+      <a href="#ejemplos" class="service-secondary-link">
+        Ver ejemplos
+        <span aria-hidden="true">›</span>
+      </a>
+
+    </div>
+
+
+    <aside class="service-note">
+      <p>
+        Una web no es solo presencia:
+        también es posicionamiento,
+        confianza y visibilidad.
+      </p>
+    </aside>
+
+  </div>
+
+
+  <div class="service-watermark" aria-hidden="true">
+    CATACLISMO
+  </div>
+
+</section>
+
+{% endblock %}

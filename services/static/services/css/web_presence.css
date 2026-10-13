@@ -1,0 +1,459 @@
+.service-page {
+    --service-red: #b72828;
+    --service-red-bright: #d33333;
+    --service-white: #f1f1ee;
+    --service-grey: #c5c5c2;
+    --service-muted: #929292;
+    --service-panel: rgba(9, 9, 9, 0.72);
+    --service-border: rgba(255, 255, 255, 0.13);
+
+    position: relative;
+    min-height: 100svh;
+    overflow: hidden;
+    padding: 64px 7% 72px;
+    color: var(--service-white);
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.94) 0%,
+            rgba(0, 0, 0, 0.88) 40%,
+            rgba(0, 0, 0, 0.55) 68%,
+            rgba(0, 0, 0, 0.28) 100%
+        ),
+        url("../images/web_presence_bg.png") center / cover no-repeat;
+}
+
+
+/* =========================================================
+   OVERLAYS
+========================================================= */
+
+.service-page .service-overlay {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+        radial-gradient(
+            circle at 35% 40%,
+            transparent 0,
+            transparent 40%,
+            rgba(0, 0, 0, 0.25) 75%,
+            rgba(0, 0, 0, 0.65) 100%
+        );
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+.service-page .service-content {
+    position: relative;
+    z-index: 2;
+    width: min(1050px, 76%);
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.service-page .service-intro {
+    max-width: 780px;
+}
+
+.service-page .service-kicker {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin: 0 0 26px;
+    color: #a6a6a6;
+    font-family: Arial, sans-serif;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.45em;
+    text-transform: uppercase;
+}
+
+.service-page .service-kicker::before {
+    content: "";
+    width: 34px;
+    height: 2px;
+    background: var(--service-red-bright);
+}
+
+.service-page .service-intro h1 {
+    margin: 0;
+    color: var(--service-white);
+    font-family: "Zen Dots", sans-serif;
+    font-size: clamp(2.8rem, 5.4vw, 5.5rem);
+    font-weight: 400;
+    line-height: 1.03;
+    letter-spacing: 0.02em;
+    text-shadow: 2px 3px 8px rgba(0, 0, 0, 0.8);
+}
+
+.service-page .service-intro h1 span {
+    display: block;
+    color: var(--service-red-bright);
+}
+
+.service-page .service-lead {
+    max-width: 730px;
+    margin: 28px 0 0;
+    color: #dededb;
+    font-family: Arial, sans-serif;
+    font-size: clamp(1.15rem, 1.8vw, 1.65rem);
+    font-weight: 400;
+    line-height: 1.45;
+}
+
+.service-page .service-description {
+    max-width: 720px;
+    margin: 22px 0 0;
+    color: #bdbdb9;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.55;
+}
+
+
+/* =========================================================
+   SERVICE CARDS
+========================================================= */
+
+.service-page .service-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.9fr;
+    gap: 18px;
+    max-width: 930px;
+    margin-top: 34px;
+}
+
+.service-page .service-card {
+    padding: 22px 24px;
+    background: var(--service-panel);
+    border: 1px solid var(--service-border);
+    border-radius: 4px;
+    backdrop-filter: blur(8px);
+}
+
+.service-page .service-card-heading {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 20px;
+}
+
+.service-page .service-card-heading h2 {
+    margin: 0;
+    color: var(--service-white);
+    font-family: Arial, sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-align: left;
+    letter-spacing: 0;
+    text-shadow: none;
+}
+
+.service-page .service-icon {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+
+
+/* =========================================================
+   WHAT'S INCLUDED
+========================================================= */
+
+.service-page .service-list {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.service-page .service-list li {
+    position: relative;
+    padding-left: 28px;
+    color: #d2d2cf;
+    font-family: Arial, sans-serif;
+    font-size: 0.93rem;
+    line-height: 1.4;
+}
+
+.service-page .service-list li::before {
+    content: "";
+    position: absolute;
+    top: 0.65em;
+    left: 0;
+    width: 13px;
+    height: 2px;
+    background: var(--service-red-bright);
+}
+
+
+/* =========================================================
+   IDEAL FOR
+========================================================= */
+
+.service-page .audience-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.service-page .audience-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-height: 44px;
+    padding: 8px 14px;
+    color: #d5d5d2;
+    font-family: Arial, sans-serif;
+    font-size: 0.9rem;
+    background: rgba(255, 255, 255, 0.035);
+    border: 1px solid rgba(255, 255, 255, 0.11);
+    border-radius: 6px;
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.service-page .audience-item:hover {
+    background: rgba(255, 255, 255, 0.07);
+    border-color: rgba(211, 51, 51, 0.45);
+    transform: translateX(3px);
+}
+
+.service-page .audience-icon {
+    width: 22px;
+    height: 22px;
+    flex: 0 0 22px;
+    object-fit: contain;
+}
+
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.service-page .service-actions {
+    display: flex;
+    align-items: center;
+    gap: 34px;
+    margin-top: 26px;
+}
+
+.service-page .service-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 34px;
+    min-width: 280px;
+    padding: 17px 22px;
+    color: #9f2828;
+    font-family: "Zen Dots", sans-serif;
+    font-size: 0.9rem;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+    background: #efefed;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 4px;
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.service-page .service-cta span {
+    font-family: Arial, sans-serif;
+    font-size: 1.6rem;
+    line-height: 1;
+}
+
+.service-page .service-cta:hover {
+    color: whitesmoke;
+    background: var(--service-red);
+    transform: translateY(-2px);
+}
+
+.service-page .service-secondary-link {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 0;
+    color: var(--service-white);
+    font-family: Arial, sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.service-page .service-secondary-link::after {
+    content: "";
+    position: absolute;
+    bottom: 3px;
+    left: 0;
+    width: 62px;
+    height: 2px;
+    background: var(--service-red-bright);
+    transition: width 0.2s ease;
+}
+
+.service-page .service-secondary-link span {
+    color: var(--service-red-bright);
+    font-size: 1.4rem;
+}
+
+.service-page .service-secondary-link:hover::after {
+    width: 100%;
+}
+
+
+/* =========================================================
+   SIDE NOTE
+========================================================= */
+
+.service-page .service-note {
+    position: absolute;
+    right: 2%;
+    bottom: 85px;
+    width: 240px;
+    padding-left: 20px;
+    border-left: 2px solid var(--service-red-bright);
+}
+
+.service-page .service-note p {
+    margin: 0;
+    color: #929292;
+    font-family: Arial, sans-serif;
+    font-size: 0.85rem;
+    font-style: italic;
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   WATERMARK
+========================================================= */
+
+.service-page .service-watermark {
+    position: absolute;
+    z-index: 1;
+    left: -10px;
+    bottom: -38px;
+    color: rgba(255, 255, 255, 0.045);
+    font-family: "Zen Dots", sans-serif;
+    font-size: clamp(6rem, 13vw, 12rem);
+    line-height: 1;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+    pointer-events: none;
+    user-select: none;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1100px) {
+    .service-page {
+        padding: 56px 5% 70px;
+    }
+
+    .service-page .service-content {
+        width: 88%;
+    }
+
+    .service-page .service-note {
+        display: none;
+    }
+}
+
+
+@media (max-width: 850px) {
+    .service-page {
+        background-position: 62% center;
+    }
+
+    .service-page .service-content {
+        width: 100%;
+    }
+
+    .service-page .service-grid {
+        grid-template-columns: 1fr;
+        max-width: 680px;
+    }
+
+    .service-page .service-intro {
+        max-width: 680px;
+    }
+
+    .service-page .service-actions {
+        flex-wrap: wrap;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .service-page {
+        padding: 44px 20px 64px;
+        background-position: 70% center;
+    }
+
+    .service-page::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.3);
+        pointer-events: none;
+    }
+
+    .service-page .service-kicker {
+        margin-bottom: 20px;
+    }
+
+    .service-page .service-intro h1 {
+        font-size: clamp(2.4rem, 12vw, 3.8rem);
+    }
+
+    .service-page .service-lead {
+        font-size: 1.1rem;
+    }
+
+    .service-page .service-description {
+        font-size: 0.92rem;
+    }
+
+    .service-page .service-card {
+        padding: 20px 18px;
+    }
+
+    .service-page .service-actions {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 18px;
+    }
+
+    .service-page .service-cta {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .service-page .service-secondary-link {
+        width: fit-content;
+    }
+
+    .service-page .service-watermark {
+        bottom: -15px;
+        font-size: 5rem;
+    }
+}

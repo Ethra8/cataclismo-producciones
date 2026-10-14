@@ -483,5 +483,9 @@ fieldset {
         max-width: 100%;
     }
 
+    .contact-title {
+        margin-bottom: 28px;
+        font-size: clamp(3rem, 10vw, 4.4rem);
+    }
 
 }

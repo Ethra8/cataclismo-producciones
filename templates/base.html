@@ -19,6 +19,7 @@
     <link rel="icon" href="{% static 'favicon/favicon.ico' %}">
     <link rel="manifest" href="{% static 'favicon/site.webmanifest' %}">    
     <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'css/variables.css' %}">
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
     {% block extra_css %}{% endblock %}
 </head>
@@ -39,7 +40,7 @@
                 </button>
 
                 <ul class="nav-dropdown-menu">
-                    <li><a href="#">Gestión <small>de</small> Eventos</a></li>
+                    <li><a href="{% url 'services:gestion_eventos' %}">Gestión <small>de</small> eventos</a></li>
                     <li><a href="#">Promoción artística</a></li>
                     <li><a href="{% url 'services:web_presence' %}">Web <small>y</small> Presencia Digital</a></li>
                     <li><a href="#">Booking <small>y</small> Representación</a></li>

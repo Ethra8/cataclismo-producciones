@@ -7,3 +7,7 @@ def services(request):
 
 def web_presence(request):
     return render(request, "services/web_presence.html")
+
+
+def gestion_eventos(request):
+    return render(request, "services/gestion_eventos.html")

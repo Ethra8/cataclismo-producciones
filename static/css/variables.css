@@ -1,0 +1,9 @@
+:root {
+    --service-red: #b72828;
+    --service-red-bright: #d33333;
+    --service-white: #f1f1ee;
+    --service-grey: #c5c5c2;
+    --service-muted: #929292;
+    --service-panel: rgba(9, 9, 9, 0.72);
+    --service-border: rgba(255, 255, 255, 0.13);
+}

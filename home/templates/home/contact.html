@@ -1,0 +1,137 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Contacto | Cataclismo Producciones{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'home/css/contact.css' %}">
+{% endblock %}
+
+{% block content %}
+<section class="contact-page">
+    <div class="contact-overlay"></div>
+
+    <div class="contact-container">
+        <div class="contact-copy">
+
+            <h1 class="contact-title">
+                <span class="digital-glitch" data-text="CONTACTO">CONTACTO</span>
+            </h1>
+            <p class="contact-services-summary">
+                Producción · Promoción · Booking · Presencia digital
+            </p>
+
+            <p class="contact-intro">
+                ¿Tienes un proyecto creativo, un evento o una propuesta artística?<br>
+                Hablemos.
+            </p>
+
+            <!-- <p class="contact-audience">
+                Trabajamos con artistas, proyectos creativos, promotores y organizaciones.
+            </p> -->
+
+            <div class="contact-info-list">
+                <div class="contact-info-item">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M3 5h18v14H3V5zm1.8 1.5L12 12.2l7.2-5.7"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <p class="contact-label">EMAIL</p>
+                        <p class="contact-value">admin@cataclismo-producciones.com</p>
+                    </div>
+                </div>
+
+                <div class="contact-info-item">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M12 21s6-5.4 6-11a6 6 0 1 0-12 0c0 5.6 6 11 6 11z"></path>
+                            <circle cx="12" cy="10" r="2.3"></circle>
+                        </svg>
+                    </div>
+                    <div>
+                        <p class="contact-label">UBICACIÓN</p>
+                        <p class="contact-value">Barcelona, Cataluña</p>
+                    </div>
+                </div>
+
+                <div class="contact-info-item">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <rect x="3" y="3" width="18" height="18" rx="5" ry="5"></rect>
+                            <circle cx="12" cy="12" r="4"></circle>
+                            <circle cx="17.5" cy="6.5" r="1"></circle>
+                        </svg>
+                    </div>
+                    <div>
+                        <p class="contact-label">SÍGUENOS</p>
+                        <p class="contact-value">@cataclismo_producciones</p>
+                    </div>
+                </div>
+            </div>
+
+            <p class="contact-response-time">
+                Respondemos normalmente en 24–48 h.
+            </p>
+
+        </div>
+
+        <div class="contact-form-card">
+            {% if messages %}
+                <div class="contact-messages">
+                    {% for message in messages %}
+                        <div class="contact-message {{ message.tags }}">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+            <form method="post" action="">
+                {% csrf_token %}
+
+                <div class="form-group">
+                    <label for="id_name">NOMBRE <span>*</span></label>
+                    <input type="text" name="name" id="id_name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="id_email">EMAIL <span>*</span></label>
+                    <input type="email" name="email" id="id_email" required>
+                </div>
+
+                <fieldset class="form-group form-options">
+                    <legend>¿Qué necesitas?</legend>
+
+                    <label class="checkbox-option">
+                        <input type="checkbox" name="services" value="gestion_produccion_evento">
+                        <span>Gestión / Producción de Eventos</span>
+                    </label>
+
+                    <label class="checkbox-option">
+                        <input type="checkbox" name="services" value="promocion_difusion">
+                        <span>Promoción & Difusión</span>
+                    </label>
+
+                    <label class="checkbox-option">
+                        <input type="checkbox" name="services" value="desarrolo_web">
+                        <span>Web & Presencia Digital</span>
+                    </label>
+
+                    <label class="checkbox-option">
+                        <input type="checkbox" name="services" value="booking">
+                        <span>Booking & Representación</span>
+                    </label>
+                </fieldset>    
+
+                <div class="form-group">
+                    <label for="id_message">MENSAJE <span>*</span></label>
+                    <textarea name="message" id="id_message" rows="5" required></textarea>
+                </div>
+
+                <button type="submit" class="contact-submit-btn">ENVIAR MENSAJE</button>
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -4,6 +4,7 @@
 {% block title %}Contacto | Cataclismo Producciones{% endblock %}
 
 {% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/title_glitch.css' %}">
 <link rel="stylesheet" href="{% static 'home/css/contact.css' %}">
 {% endblock %}
 
@@ -14,8 +15,8 @@
     <div class="contact-container">
         <div class="contact-copy">
 
-            <h1 class="contact-title">
-                <span class="digital-glitch" data-text="CONTACTO">CONTACTO</span>
+            <h1>
+                <span class="title-glitch" data-text="Contacto">Contacto</span>
             </h1>
             <p class="contact-services-summary">
                 Producción · Promoción · Booking · Presencia digital
@@ -39,7 +40,7 @@
                     </div>
                     <div>
                         <p class="contact-label">EMAIL</p>
-                        <p class="contact-value">admin@cataclismo-producciones.com</p>
+                        <a class="contact-value" href="mailto:admin@cataclismo-producciones.com">admin@cataclismo-producciones.com</a>
                     </div>
                 </div>
 
@@ -66,7 +67,7 @@
                     </div>
                     <div>
                         <p class="contact-label">SÍGUENOS</p>
-                        <p class="contact-value">@cataclismo_producciones</p>
+                        <a class="contact-value" href="https://www.instagram.com/cataclismo_producciones/">@cataclismo_producciones</a>
                     </div>
                 </div>
             </div>
@@ -126,7 +127,7 @@
 
                 <div class="form-group">
                     <label for="id_message">MENSAJE <span>*</span></label>
-                    <textarea name="message" id="id_message" rows="5" required></textarea>
+                    <textarea name="message" id="id_message" rows="5" placeholder="Explica como te podemos ayudar con tus propias palabras ..." required></textarea>
                 </div>
 
                 <button type="submit" class="contact-submit-btn">ENVIAR MENSAJE</button>
@@ -134,4 +135,8 @@
         </div>
     </div>
 </section>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'js/title_glitch.js' %}" defer></script>
 {% endblock %}

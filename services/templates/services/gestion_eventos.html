@@ -4,6 +4,7 @@
 {% block title %}Producción y gestión de eventos | Cataclismo Producciones{% endblock %}
 
 {% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/title_glitch.css' %}">
 <link rel="stylesheet" href="{% static 'services/css/gestion_eventos.css' %}">
 {% endblock %}
 
@@ -21,18 +22,19 @@
 
             <h1>
                 Gestión y
-                Producción de <span class="digital-glitch" data-text="Eventos">Eventos</span>
+                Producción de <span class="title-glitch" data-text="Eventos">Eventos</span>
             </h1>
 
-            <p class="event-hero-lead">
-                Del concepto al directo. Coordinamos la producción para que cada parte
-                del evento funcione como debe.
+            <p class="event-hero-summary">
+                Preproducción · gestión · coordinación · logística 
             </p>
 
-            <p class="event-hero-text">
-                Preproducción, coordinación, logística y seguimiento para conciertos,
-                ciclos y propuestas culturales.
+            <p class="event-hero-lead">
+                <span>Del concepto al directo.</span> 
+                <span></span> Coordinamos la producción de conciertos,
+                ciclos y propuestas culturales.</span>
             </p>
+
 
             <a href="{% url 'contact' %}" class="primary-cta">
                 Cuéntanos tu proyecto
@@ -148,7 +150,7 @@
 
             <div class="audience-item">
                 <span class="audience-icon" aria-hidden="true">♫</span>
-                <p>Artistas y proyectos musicales</p>
+                <p>Proyectos culturales y musicales</p>
             </div>
 
             <div class="audience-item">
@@ -187,8 +189,8 @@
                 <p class="section-kicker">Cómo trabajamos</p>
 
                 <h2>
-                    Un proceso claro
-                    <span>y adaptado a tu proyecto</span>
+                    Un proceso 
+                    <span>adaptado a tu proyecto</span>
                 </h2>
             </div>
         </div>
@@ -259,7 +261,7 @@
                 </div>
 
                 <img
-                    src="{% static 'services/images/gestion_eventos/event_live.png' %}"
+                    src="{% static 'services/images/gestion_eventos/multitud-muchedumbre-concierto-destacar.jpg' %}"
                     alt="Concierto en directo durante un evento"
                     loading="lazy"
                 >
@@ -276,10 +278,10 @@
 
     <!-- FLEXIBILITY -->
     <section class="event-flexibility">
-
+            <div class="event-flexibility-overlay"></div>
         <div class="event-flexibility-image">
             <img
-                src="{% static 'services/images/gestion_eventos/event_flightcases.png' %}"
+                src="{% static 'services/images/gestion_eventos/blanco-y-negro-hombre-noche-oscuro-19312545.jpg' %}"
                 alt="Material técnico preparado para producción de eventos"
                 loading="lazy"
             >
@@ -332,5 +334,5 @@
 {% endblock %}
 
 {% block extra_js %}
-<script src="{% static 'services/js/digital_glitch.js' %}" defer></script>
+<script src="{% static 'js/title_glitch.js' %}" defer></script>
 {% endblock %}

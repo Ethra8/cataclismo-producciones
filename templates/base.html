@@ -11,7 +11,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cambay:ital,wght@0,400;0,700;1,400;1,700&family=Iceland&family=Zen+Dots&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Iceland&family=Roboto:ital,wght@0,100..900;1,100..900&family=Zen+Dots&display=swap" rel="stylesheet">
     <!-- favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon/apple-touch-icon.png' %}">
     <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon/favicon-32x32.png' %}">
@@ -28,28 +28,31 @@
 
     <nav>
         <a class="nav-logo" href="{% url 'home' %}">
-            <img src="{% static 'images/logo.png' %}" alt="logo" aria-label="go to home page" width="176px">
+            <img src="{% static 'images/logo/logo.png' %}" alt="logo" aria-label="go to home page" width="176px">
         </a>
+        <div class="nav-links">
+            <a href="{% url 'contact' %}" class="primary-cta">Contacto</a>
 
-        <ul class="nav-links">
-            <li class="nav-dropdown">
-                <button class="nav-dropdown-toggle" type="button" aria-expanded="false">
-                    Servicios
-                    <img src="{% static 'icons/chevron_down_red.png' %}" alt="Desplegar menú" aria-hidden="true" class="nav-dropdown-icon" width="20">
-                    <!-- <span aria-hidden="true">▾</span> -->
-                </button>
+            <ul class="nav-links">
+                <li class="nav-dropdown">
+                    <button class="nav-dropdown-toggle" type="button" aria-expanded="false">
+                        Servicios
+                        <img src="{% static 'icons/chevron-down-red.png' %}" alt="Desplegar menú" aria-hidden="true" class="nav-dropdown-icon" width="20">
+                        <!-- <span aria-hidden="true">▾</span> -->
+                    </button>
 
-                <ul class="nav-dropdown-menu">
-                    <li><a href="{% url 'services:gestion_eventos' %}">Gestión <small>de</small> eventos</a></li>
-                    <li><a href="#">Promoción artística</a></li>
-                    <li><a href="{% url 'services:web_presence' %}">Web <small>y</small> Presencia Digital</a></li>
-                    <li><a href="#">Booking <small>y</small> Representación</a></li>
-                </ul>
-            </li>
+                    <ul class="nav-dropdown-menu">
+                        <li><a href="{% url 'services:gestion_eventos' %}">Gestión <small>de</small> eventos</a></li>
+                        <li><a href="#">Promoción artística</a></li>
+                        <li><a href="{% url 'services:web_presence' %}">Web <small>y</small> Presencia Digital</a></li>
+                        <li><a href="#">Booking <small>y</small> Representación</a></li>
+                    </ul>
+                </li>
 
-            {% block nav_links %}
-            {% endblock %}
-        </ul>
+                {% block nav_links %}
+                {% endblock %}
+            </ul>
+        </div>
     </nav>
     {% block messages %}
         {% include "components/messages.html" %}

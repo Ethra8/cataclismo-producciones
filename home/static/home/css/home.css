@@ -17,13 +17,6 @@ body::before {
 }
 
 .home-page {
-    --service-red: #b72828;
-    --service-red-bright: #d33333;
-    --service-white: #f1f1ee;
-    --service-grey: #c5c5c2;
-    --service-muted: #929292;
-    --service-panel: rgba(9, 9, 9, 0.72);
-    --service-border: rgba(255, 255, 255, 0.13);    
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -32,7 +25,7 @@ body::before {
     min-height: 100svh;
     overflow: hidden;
     padding: 64px 0 72px;
-    color: var(--service-white);
+    color: var(--color-white);
     background:
         /* linear-gradient(
             90deg,
@@ -59,7 +52,7 @@ body::before {
 }
 
 .home-page h1 {
-    color: whitesmoke;
+    color: var(--color-white);
     text-align: right;
     font-family: "Zen Dots", sans-serif;
     font-size: clamp(2.8rem, 5.4vw, 5.5rem);
@@ -72,12 +65,12 @@ body::before {
 
 /* .home-page h1 span {
     display: block;
-    color: var(--service-red-bright);
+    color: var(--color-red-bright);
 }
  */
 
 
-.home-page h1 .digital-glitch {
+.home-page h1 .title-glitch {
     position: relative;
     display: inline-block;
     width: auto;
@@ -90,8 +83,8 @@ body::before {
         0 0 22px rgba(211, 51, 51, 0.14);
 }
 
-.home-page h1 .digital-glitch::before,
-.home-page h1 .digital-glitch::after {
+.home-page h1 .title-glitch::before,
+.home-page h1 .title-glitch::after {
     content: attr(data-text);
     position: absolute;
     top: 0;
@@ -103,24 +96,24 @@ body::before {
     opacity: 0;
 }
 
-.home-page h1 .digital-glitch::before {
+.home-page h1 .title-glitch::before {
     color: rgba(255, 255, 255, 0.9);
 }
 
-.home-page h1 .digital-glitch::after {
+.home-page h1 .title-glitch::after {
     color: rgba(183, 40, 40, 0.95);
 }
 
-.home-page h1 .digital-glitch.is-glitching {
+.home-page h1 .title-glitch.is-glitching {
     animation: digital-flicker 0.12s steps(2, end) 1;
 }
 
-.home-page h1 .digital-glitch.is-glitching::before {
+.home-page h1 .title-glitch.is-glitching::before {
     opacity: 1;
     animation: digital-slice-a 0.12s steps(2, end) 1;
 }
 
-.home-page h1 .digital-glitch.is-glitching::after {
+.home-page h1 .title-glitch.is-glitching::after {
     opacity: 1;
     animation: digital-slice-b 0.12s steps(2, end) 1;
 }
@@ -230,9 +223,9 @@ body::before {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .home-page h1 .digital-glitch,
-    .home-page h1 .digital-glitch::before,
-    .home-page h1 .digital-glitch::after {
+    .home-page h1 .title-glitch,
+    .home-page h1 .title-glitch::before,
+    .home-page h1 .title-glitch::after {
         animation: none !important;
         transform: none !important;
         filter: none !important;
@@ -245,7 +238,7 @@ body::before {
 }
 
 .home-page header p {
-    color: whitesmoke;
+    color: var(--color-white);
     text-align: right;
     font-family: "Iceland", sans-serif;
     font-size: 2em;
@@ -300,7 +293,7 @@ body::before {
 }
 
 .contact-form legend {
-    color: whitesmoke;
+    color: var(--color-white);
     font-family: "Iceland", sans-serif;
     font-size: 1.4em;
     font-weight: 500;
@@ -320,7 +313,7 @@ body::before {
 .contact-form textarea {
     padding: 11px 12px;
     color: #1b1b1b;
-    font-family: Arial, sans-serif;
+    font-family: "Roboto", Helvetica, sans-serif;
     line-height: 1.4;
     background: rgba(255, 255, 255, 0.42);
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -337,20 +330,20 @@ body::before {
 .contact-form input:focus,
 .contact-form textarea:focus {
     background: rgba(255, 255, 255, 0.85);
-    border-color: whitesmoke;
+    border-color: var(--color-white);
 }
 
 .contact-form textarea::placeholder {
     color: #1b1b1b;
-    font-family: Arial, sans-serif;
+    font-family: "Roboto", Helvetica, sans-serif;
     font-size: 0.75rem;
     font-weight: 600;
     letter-spacing: 0.08em;
 }
 
 .form-group span {
-    color: #f5f5f5;
-    font-family: Arial, sans-serif;
+    color: var(--color-white);
+    font-family: "Roboto", Helvetica, sans-serif;
     font-size: 0.75rem;
     text-transform: capitalize;
 }
@@ -379,8 +372,8 @@ body::before {
     flex: 0 0 14px;
     display: grid;
     place-items: center;
-    background: whitesmoke;
-    border: 1px solid whitesmoke;
+    background: var(--color-white);
+    border: 1px solid var(--color-white);
     border-radius: 2px;
     cursor: pointer;
 }
@@ -400,35 +393,35 @@ body::before {
 }
 
 .checkbox-option:has(input:checked) span {
-    color: whitesmoke;
+    color: var(--color-white);
     font-weight: 700;
 }
 
 .contact-form button {
     align-self: flex-end;
     padding: 10px 18px;
-    color: whitesmoke;
+    color: var(--color-white);
     font-family: "Zen Dots", sans-serif;
     font-size: 0.9em;
     font-weight: 400;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     background: rgba(10, 10, 10, 0.7);
-    border: 1px solid whitesmoke;
+    border: 1px solid var(--color-white);
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .contact-form button:hover {
-    color: #111;
+    color: var(--color-black);
     background: rgb(221, 221, 221);
 }
 
 .photo-credit {
     color: rgb(189, 188, 188);
     text-align: right;
-    font-family: Arial, sans-serif;
+    font-family: "Roboto", Helvetica, sans-serif;
     font-size: 0.75em;
     margin: auto 5% 16px;
 }
@@ -449,7 +442,7 @@ body::before {
 .form-messages .message {
     padding: 10px 12px;
     margin: 0;
-    color: whitesmoke;
+    color: var(--color-white);
     background: transparent;
     border-left: 3px solid rgba(255, 255, 255, 0.5);
     box-shadow: none;

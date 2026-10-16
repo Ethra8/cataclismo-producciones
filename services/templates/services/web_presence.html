@@ -4,6 +4,7 @@
 {% block title %}Web y Presencia Digital | Cataclismo Producciones{% endblock %}
 
 {% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/title_glitch.css' %}">
 <link rel="stylesheet" href="{% static 'services/css/web_presence.css' %}">
 {% endblock %}
 
@@ -21,7 +22,7 @@
 
       <h1>
         Web y Presencia
-        <span class="digital-glitch" data-text="Digital">Digital</span>
+        <span class="title-glitch" data-text="Digital">Digital</span>
       </h1>
 
       <p class="service-lead">
@@ -167,5 +168,5 @@
 {% endblock %}
 
 {% block extra_js %}
-<script src="{% static 'services/js/digital_glitch.js' %}" defer></script>
+<script src="{% static 'js/title_glitch.js' %}" defer></script>
 {% endblock %}

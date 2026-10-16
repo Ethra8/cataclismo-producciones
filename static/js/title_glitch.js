@@ -1,5 +1,5 @@
 (function () {
-    const word = document.querySelector(".digital-glitch");
+    const word = document.querySelector(".title-glitch");
 
     if (!word) return;
 

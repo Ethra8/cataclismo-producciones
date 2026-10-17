@@ -423,7 +423,6 @@ footer a {
 @media (max-width: 388px) {
     .mobile-nav .mobile-menu a {
         width: 280px;
-        padding: 0;
     }
 
     .mobile-nav.is-open .mobile-menu {

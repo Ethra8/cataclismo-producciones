@@ -518,6 +518,19 @@ body::before {
         background-size: cover;
     }
 
+    .home-page {
+        background:
+            /* linear-gradient(
+                90deg,
+                rgba(0, 0, 0, 0.94) 0%,
+                rgba(0, 0, 0, 0.88) 40%,
+                rgba(0, 0, 0, 0.55) 68%,
+                rgba(0, 0, 0, 0.28) 100%
+            ), */
+            url("") center / cover no-repeat;
+    }
+
+
     .home-header {
         padding: 36px 20px 6px;
         margin: 310px 0 27px auto;

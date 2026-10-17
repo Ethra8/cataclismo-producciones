@@ -19,7 +19,6 @@ body::before {
     overflow: hidden;
     background:
         linear-gradient(rgba(7, 7, 7, 0.98), rgba(34, 34, 34, 0.72)),
-        /* url("../images/lote-surtido-de-amplificadores-de-guitarra-351265.jpg") center / cover no-repeat; */
 }
 
 .contact-overlay {
@@ -74,7 +73,6 @@ body::before {
 .contact-copy {
     padding: 30px;
     color: var(--color-white);
-    /* width: 100%; */
     max-width: 100%;
     margin-left: auto;
 }
@@ -195,7 +193,6 @@ a.contact-value:hover {
     padding: 30px 26px;
     border: 1px solid rgba(211, 51, 51, 0.28);
     border-radius: 14px;
-    /* background: rgba(var(--color-red-rgb), 0.6); */
     background: linear-gradient(
         135deg,
         rgba(163, 13, 13, 0.5) 0%,
@@ -352,7 +349,6 @@ fieldset {
     border: 1px solid var(--color-white);
     transform: translateY(1px);
     filter: brightness(1.05);
-    /* box-shadow: 0 14px 30px rgba(211, 51, 51, 0.3); */
 }
 
 .contact-messages {
@@ -390,7 +386,6 @@ fieldset {
 
     .contact-container {
         gap: 36px;
-        /* padding: 7% 14%; */
         margin-top: -3%;    
     }
 }

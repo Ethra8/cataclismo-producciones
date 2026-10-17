@@ -27,13 +27,6 @@ body::before {
     padding: 64px 0 72px;
     color: var(--color-white);
     background:
-        /* linear-gradient(
-            90deg,
-            rgba(0, 0, 0, 0.94) 0%,
-            rgba(0, 0, 0, 0.88) 40%,
-            rgba(0, 0, 0, 0.55) 68%,
-            rgba(0, 0, 0, 0.28) 100%
-        ), */
         url("../images/under_construction_proximamente.png") center / cover no-repeat;
 }
 
@@ -62,13 +55,6 @@ body::before {
     text-shadow: 2px 3px 4px rgba(0, 0, 0, 0.75);
     margin: 0 0 0.5em;
 }
-
-/* .home-page h1 span {
-    display: block;
-    color: var(--color-red-bright);
-}
- */
-
 
 .home-page h1 .title-glitch {
     position: relative;
@@ -520,13 +506,6 @@ body::before {
 
     .home-page {
         background:
-            /* linear-gradient(
-                90deg,
-                rgba(0, 0, 0, 0.94) 0%,
-                rgba(0, 0, 0, 0.88) 40%,
-                rgba(0, 0, 0, 0.55) 68%,
-                rgba(0, 0, 0, 0.28) 100%
-            ), */
             url("") center / cover no-repeat;
     }
 
@@ -562,10 +541,6 @@ body::before {
 
 
 @media (max-width: 566.98px) {
-    /* body::before {
-        background-position: top center;
-    } */
-
     .home-page h1 {
         font-size: 2.5em;
     }

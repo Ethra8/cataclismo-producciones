@@ -70,7 +70,6 @@ nav {
 .nav-links a:hover {
     color: #8f2525;
     background: rgba(143, 37, 37, 0.15);
-    /* padding: 0.25em 1em; */
 }
 
 .nav-dropdown-toggle {
@@ -153,7 +152,6 @@ nav {
 
 .nav-dropdown.open .nav-dropdown-toggle .nav-dropdown-icon {
     transform: rotate(180deg);
-    /* margin-bottom: 7px; */
 }
 
 /* =========================================================

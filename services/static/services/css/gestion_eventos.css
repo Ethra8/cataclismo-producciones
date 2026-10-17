@@ -61,7 +61,6 @@ body::before {
     margin-top: 0;
 }
 
-.event-production-page h1,
 .event-production-page h2 {
     text-transform: uppercase;
 }
@@ -136,7 +135,7 @@ body::before {
     padding: 90px 5vw 80px;
 }
 
-.event-hero-content h1 {
+/* .event-hero-content h1 {
     max-width: 1020px;
     margin-bottom: 20px;
     font-family: "Zen Dots", sans-serif;
@@ -303,7 +302,7 @@ body::before {
         filter: none !important;
     }
 }
-
+ */
 
 .event-hero-lead {
     max-width: 670px;
@@ -738,10 +737,6 @@ body::before {
     .event-hero-content {
         align-self: flex-end;
         padding: 100px 22px 50px;
-    }
-
-    .event-hero-content h1 {
-        font-size: clamp(2.6rem, 12vw, 4.8rem);
     }
 
     .event-services,

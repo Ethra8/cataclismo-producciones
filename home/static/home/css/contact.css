@@ -13,7 +13,7 @@ body::before {
 .contact-page {
     position: relative;
     min-height: calc(100vh - 88px);
-    margin-top: 88px;
+    margin-top: 0;
     padding: 70px;    
     font-family: "Roboto", Helvetica, sans-serif;
     overflow: hidden;
@@ -44,7 +44,7 @@ body::before {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: start;
-    gap: 70px;
+    gap: 10em;
     width: 90%;
     margin: 0 auto;
     z-index: 1;
@@ -74,8 +74,9 @@ body::before {
 .contact-copy {
     padding: 30px;
     color: var(--color-white);
-    width: 100%;
+    /* width: 100%; */
     max-width: 100%;
+    margin-left: auto;
 }
 
 h1 {
@@ -188,9 +189,9 @@ a.contact-value:hover {
 .contact-form-card {
     width: 100%;
     max-width: 520px;
-    margin-top: 20%;
+    margin-top: 0;
     margin-right: auto;
-    margin-left: 1%;
+    margin-left: auto;
     padding: 30px 26px;
     border: 1px solid rgba(211, 51, 51, 0.28);
     border-radius: 14px;

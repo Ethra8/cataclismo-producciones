@@ -5,8 +5,9 @@ body::before {
     width: 100vw;
     height: 100lvh;
     background: 
-        linear-gradient(rgba(7, 7, 7, 0.88), rgba(34, 34, 34, 0.52)),
-        url("../images/lote-surtido-de-amplificadores-de-guitarra-351265.jpg") center / cover no-repeat;
+        /* linear-gradient(rgba(63, 1, 1, 0.18), rgba(80, 0, 0, 0.32)), */
+        linear-gradient(rgba(63, 1, 1, 0.18), rgba(80, 0, 0, 0.32)),
+        url("../images/vintage-radios-dispositivo-coleccion-14681924.jpg") center / cover no-repeat;
     z-index: -1;
 }
 
@@ -28,12 +29,12 @@ body::before {
     background:
         radial-gradient(
             circle at 78% 22%,
-            rgba(153, 29, 29, 0.16),
+            rgba(59, 5, 5, 0.56),
             transparent 22%
         ),
         radial-gradient(
             circle at 18% 35%,
-            rgba(187, 27, 27, 0.26),
+            rgba(58, 4, 4, 0.66),
             transparent 18%
         );
 }
@@ -59,13 +60,14 @@ body::before {
     -webkit-backdrop-filter: blur(5px);
 
     -webkit-mask-image:
-        linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%),
-        linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
+        linear-gradient(to right, transparent 0%, rgb(5 1 1 / 96%) 4%, rgb(13 2 2 / 96%) 96%, transparent 100%), 
+        linear-gradient(to bottom, transparent 0%, rgba(13, 2, 2, 0.96) 4%, rgba(5, 1, 1, 0.96) 96%, transparent 100%);        
     -webkit-mask-composite: source-in;
 
     mask-image: 
-        linear-gradient(to right, transparent 0%, black 6%, black 96%, transparent 100%), 
-        linear-gradient(to bottom, transparent 0%, black 6%, black 96%, transparent 100%);    mask-composite: intersect;
+        linear-gradient(to right, transparent 0%, rgb(5 1 1 / 96%) 4%, rgb(13 2 2 / 96%) 96%, transparent 100%), 
+        linear-gradient(to bottom, transparent 0%, rgba(13, 2, 2, 0.96) 4%, rgba(5, 1, 1, 0.96) 96%, transparent 100%);        
+    mask-composite: intersect;
 
     z-index: -1;
 }

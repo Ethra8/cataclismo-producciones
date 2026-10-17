@@ -29,4 +29,4 @@ Foto de Vicky Marpalli : https://www.pexels.com/es-es/foto/nina-cara-enfrentarse
 Foto de stardust multimedia: https://www.pexels.com/es-es/foto/una-mujer-con-un-vestido-morado-esta-de-pie-en-una-nube-de-polvo-de-colores-28316426/
 
 CONTACTO
-Foto de Expect Best: https://www.pexels.com/es-es/foto/lote-surtido-de-amplificadores-de-guitarra-351265/
+Foto de Andrea De Santis: https://www.pexels.com/es-es/foto/vintage-radios-dispositivo-coleccion-14681924/

@@ -1,0 +1,207 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Producción y gestión de eventos | Cataclismo Producciones{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/title_glitch.css' %}">
+<link rel="stylesheet" href="{% static 'services/css/web_example_one.css' %}">
+{% endblock %}
+
+
+{% block nav %}
+<nav class="example-one-nav">
+    <a href="#" class="example-one-logo">
+        Arte de Seda
+    </a>
+
+    <div class="example-one-nav-links">
+        <a href="#home">Inicio</a>
+        <a href="#about">Quienes somos</a>
+        <a href="#services">Shows</a>
+        <a href="#cursos">Cursos</a>
+        <a href="#work">Talleres</a>
+        <a href="#contact">Contacto</a>
+    </div>
+</nav>
+{% endblock %}
+
+{% block content %}
+
+<main class="web-example-one-page">
+
+    <!-- HERO -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+
+            <h1>
+                Arte
+                <span>de Seda</span>
+            </h1>
+
+            <!-- <p class="hero-summary">
+                Preproducción · gestión · coordinación · logística 
+            </p> -->
+
+            <p class="hero-lead">
+                <span>Despierta tus sentidos.</span> 
+                <span></span>
+            </p>
+
+        </div>
+    </section>
+
+
+    <!-- ACTIVIDAD -->
+    <section id="cursos" class="activities">
+            <div class="activities-overlay"></div>
+
+        <div class="activities-content">
+            <p class="section-kicker">Nuestros Cursos</p>
+
+            <h2>
+                Nos adaptamos
+                <span>al punto en el que estés</span>
+            </h2>
+
+            <p>
+                Podemos encargarnos de la producción completa o incorporarnos a un
+                proyecto que ya está en marcha para gestionar únicamente las áreas
+                que necesites.
+            </p>
+        </div>
+        <div class="activities-image">
+            <img
+                src="{% static 'services/images/web_example_one/cautivadora-actuacion-de-danza-aerea-en-seda-30131258.png' %}"
+                alt="niña haciendo acrobacias en seda aerea"
+            >
+        </div>
+
+    </section>
+
+    <!-- GALERIA -->
+    <section class="event-process section-dark">
+
+        <div class="section-heading">
+            <div>
+                <p class="section-kicker">Galería</p>
+
+                <h2>
+                    Un proceso 
+                    <span>adaptado a tu proyecto</span>
+                </h2>
+            </div>
+        </div>
+
+        <div class="event-process-grid">
+
+            <article class="process-card">
+                <div class="process-card-header">
+                    <span class="process-arrow" aria-hidden="true">→</span>
+                </div>
+
+                <img
+                    src="{% static 'services/images/gestion_eventos/event_planning.png' %}"
+                    alt="Planificación de producción de un evento"
+                    loading="lazy"
+                >
+
+                <h3>Cuéntanos el proyecto</h3>
+
+                <p>
+                    Entendemos el formato, las necesidades y el punto de partida.
+                </p>
+            </article>
+
+            <article class="process-card">
+                <div class="process-card-header">
+                    <span class="process-arrow" aria-hidden="true">→</span>
+                </div>
+
+                <img
+                    src="{% static 'services/images/gestion_eventos/event_production_plan.png' %}"
+                    alt="Planificación técnica y logística de un evento"
+                    loading="lazy"
+                >
+
+                <h3>Diseñamos la producción</h3>
+
+                <p>
+                    Definimos tareas, calendario, recursos y coordinación.
+                </p>
+            </article>
+
+            <article class="process-card">
+                <div class="process-card-header">
+                    <span class="process-arrow" aria-hidden="true">→</span>
+                </div>
+
+                <img
+                    src="{% static 'services/images/gestion_eventos/event_backstage.png' %}"
+                    alt="Equipo de producción trabajando entre bastidores"
+                    loading="lazy"
+                >
+
+                <h3>Lo ponemos en marcha</h3>
+
+                <p>
+                    Gestionamos las partes implicadas y hacemos seguimiento.
+                </p>
+            </article>
+
+            <article class="process-card">
+                <div class="process-card-header">
+                    <span class="process-arrow" aria-hidden="true">→</span>
+                </div>
+
+                <img
+                    src="{% static 'services/images/gestion_eventos/multitud-muchedumbre-concierto-destacar.jpg' %}"
+                    alt="Concierto en directo durante un evento"
+                    loading="lazy"
+                >
+
+                <h3>Llega el evento</h3>
+
+                <p>
+                    Coordinamos la ejecución para que todo encaje.
+                </p>
+            </article>
+
+        </div>
+    </section>
+
+
+    <!-- FINAL CTA -->
+    <section class="event-final-cta">
+
+        <div class="event-final-cta-overlay"></div>
+
+        <div class="event-final-cta-content">
+            <p class="section-kicker">¿Hablamos?</p>
+
+            <h2>
+                ¿Tienes un evento
+                <span>entre manos?</span>
+            </h2>
+
+            <p>
+                Cuéntanos qué estás preparando y vemos cómo podemos ayudarte.
+            </p>
+
+            <a href="{% url 'contact' %}" class="primary-cta">
+                Hablemos
+                <span aria-hidden="true">→</span>
+            </a>
+        </div>
+
+    </section>
+
+</main>
+
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'js/title_glitch.js' %}" defer></script>
+{% endblock %}

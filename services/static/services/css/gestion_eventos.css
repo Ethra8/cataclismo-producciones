@@ -29,7 +29,7 @@ body::before {
     position: relative;
     min-height: 100svh;
     overflow: hidden;
-    padding: 0 4% 72px;
+    padding: 0 4%;
     color: var(--color-white);
     background:
         linear-gradient(
@@ -458,14 +458,13 @@ body::before {
 .event-final-cta-overlay {
     position: absolute;
     inset: 0;
-    background:
-        linear-gradient(
-            90deg,
-            rgba(0, 0, 0, 0.9) 0%,
-            rgba(110, 0, 0, 0.72) 42%,
-            rgba(180, 0, 0, 0.26) 100%
-        );
-}
+    background: linear-gradient(
+        90deg, 
+        rgba(23, 22, 22, 0.95) 0%, 
+        rgba(23, 22, 22, 0.76) 22%, 
+        rgb(89 14 14 / 72%) 42%, 
+        rgb(199 70 70 / 26%) 100%);
+    }
 
 .event-final-cta-content {
     position: relative;

@@ -30,3 +30,8 @@ Foto de stardust multimedia: https://www.pexels.com/es-es/foto/una-mujer-con-un-
 
 CONTACTO
 Foto de Andrea De Santis: https://www.pexels.com/es-es/foto/vintage-radios-dispositivo-coleccion-14681924/
+
+WEB DESIGN
+Foto de Anderson Portella: https://www.pexels.com/es-es/foto/acrobacia-graciosa-en-seda-aerea-realizando-en-brasil-30131215/
+Foto de Anderson Portella: https://www.pexels.com/es-es/foto/cautivadora-actuacion-de-danza-aerea-en-seda-30131258/
+Foto de Anderson Portella: https://www.pexels.com/es-es/foto/blanco-y-negro-mujer-oscuro-bailando-10154709/

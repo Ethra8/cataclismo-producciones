@@ -9,9 +9,9 @@
     <title>{% block title %}{% endblock %}Cataclismo Producciones</title>
 
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Iceland&family=Roboto:ital,wght@0,100..900;1,100..900&family=Zen+Dots&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comforter&family=Comforter+Brush&family=Explora&family=Iceland&family=Roboto:ital,wght@0,100..900;1,100..900&family=Splash&family=Zen+Dots&display=swap" rel="stylesheet">
     <!-- favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon/apple-touch-icon.png' %}">
     <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon/favicon-32x32.png' %}">
@@ -26,10 +26,12 @@
 
 <body>
 
+    {% block nav %}
     <nav>
         <a class="nav-logo" href="{% url 'home' %}">
             <img src="{% static 'images/logo/logo.png' %}" alt="logo" aria-label="go to home page" width="176px">
         </a>
+
         <div class="nav-links">
             <a href="{% url 'contact' %}" class="primary-cta">Contacto</a>
 
@@ -38,7 +40,6 @@
                     <button class="nav-dropdown-toggle" type="button" aria-expanded="false">
                         Servicios
                         <img src="{% static 'icons/chevron-down-red.png' %}" alt="Desplegar menú" aria-hidden="true" class="nav-dropdown-icon" width="20">
-                        <!-- <span aria-hidden="true">▾</span> -->
                     </button>
 
                     <ul class="nav-dropdown-menu">
@@ -54,6 +55,8 @@
             </ul>
         </div>
     </nav>
+    {% endblock %}
+
     {% block messages %}
         {% include "components/messages.html" %}
     {% endblock %}

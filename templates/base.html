@@ -9,9 +9,10 @@
     <title>{% block title %}{% endblock %}Cataclismo Producciones</title>
 
     <!-- Google Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Comforter&family=Comforter+Brush&family=Explora&family=Iceland&family=Roboto:ital,wght@0,100..900;1,100..900&family=Splash&family=Zen+Dots&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comforter&family=Comforter+Brush&family=Explora&family=Iceland&family=Roboto:ital,wght@0,100..900;1,100..900&family=Splash&family=Zen+Dots&family=Zen+Loop:ital@0;1&display=swap" rel="stylesheet">
+
     <!-- favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon/apple-touch-icon.png' %}">
     <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon/favicon-32x32.png' %}">
@@ -54,6 +55,23 @@
                 {% endblock %}
             </ul>
         </div>
+
+        <div class="mobile-nav">
+            <button class="mobile-menu-toggle menu-toggle" type="button" aria-expanded="false" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="mobile-menu">
+                <a href="{% url 'services:gestion_eventos' %}">Gestión <small>de</small> eventos</a>
+                <a href="#">Promoción artística</a>
+                <a href="{% url 'services:web_presence' %}">Web <small>y</small> Presencia Digital</a>
+                <a href="#">Booking <small>y</small> Representación</a>
+                <button href="{% url 'contact' %}" class="primary-cta">Contacto</button>
+            </div>
+        </div>
+    
     </nav>
     {% endblock %}
 
@@ -74,6 +92,8 @@
         {% endblock %}
     </footer>
 
+
+    <script src="{% static 'js/mobile_nav.js' %}" defer></script>
     <script src="{% static 'js/base.js' %}"></script>
     {% block extra_js %}{% endblock %}
 

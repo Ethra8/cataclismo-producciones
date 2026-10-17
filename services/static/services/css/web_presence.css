@@ -59,7 +59,7 @@ nav, footer {
 .service-page .service-content {
     position: relative;
     z-index: 2;
-    width: min(1050px, 76%);
+    width: min(1120px, 86%);
     font-family: "Roboto", Helvetica, sans-serif;
     font-size: 1rem;
     line-height: 1.55;
@@ -97,10 +97,10 @@ nav, footer {
 
 .service-page .service-lead {
     max-width: 730px;
-    margin: 2rem 0 0;
+    margin: 2.9rem 0 0;
     color: #dededb;
     font-family: "Iceland", sans-serif;
-    font-size: clamp(1.6rem, 2vw, 2rem);
+    font-size: clamp(1.5rem, 2vw, 2rem);
     font-weight: 400;
     line-height: 1.25;
 }
@@ -112,6 +112,7 @@ nav, footer {
     /* font-family: "Roboto", Helvetica, sans-serif; */
     font-size: 1rem;
     line-height: 1.55;
+    letter-spacing: 0.05em;
 }
 
 
@@ -121,9 +122,9 @@ nav, footer {
 
 .service-page .service-grid {
     display: grid;
-    grid-template-columns: 1.2fr 0.9fr;
+    grid-template-columns: 1fr 0.9fr;
     gap: 18px;
-    max-width: 930px;
+    max-width: 100%;
     margin-top: 34px;
 }
 
@@ -154,8 +155,8 @@ nav, footer {
 }
 
 .service-page .service-icon {
-    width: 46px;
-    height: 46px;
+    width: 56px;
+    height: 56px;
     object-fit: contain;
 }
 
@@ -221,13 +222,18 @@ nav, footer {
         transform 0.2s ease;
 }
 
+/* .service-page .service-list audience-item:nth-of-type(2) span,
+.service-page .service-list audience-item:nth-of-type(3) span {
+    padding: 0.5em;
+} */
+
 .service-page .audience-icon {
-    width: 36px;
-    height: 36px;
-    flex: 0 0 36px;
+    padding: .15em 0;
+    width: 56px;
+    height: 56px;
+    flex: 0 0 56px;
     object-fit: contain;
 }
-
 
 /* =========================================================
    ACTIONS
@@ -246,7 +252,7 @@ nav, footer {
     justify-content: space-between;
     gap: 34px;
     min-width: 280px;
-    padding: 17px 22px;
+    padding: .35em 1.75em;
     color: #9f2828;
     font-family: "Zen Dots", sans-serif;
     font-size: 0.9rem;
@@ -356,24 +362,41 @@ nav, footer {
    RESPONSIVE
 ========================================================= */
 
+@media (max-width: 1299.98px) {
+    .service-page {
+        padding: 56px 5% 70px;
+    }
+
+    .service-page .service-content {
+        width: 90%;
+    }
+
+    .service-page .service-note {
+        display: none;
+    }
+
+}
+
+
 @media (max-width: 1100px) {
     .service-page {
         padding: 56px 5% 70px;
     }
 
     .service-page .service-content {
-        width: 88%;
+        width: 100%;
     }
 
     .service-page .service-note {
         display: none;
     }
+
 }
 
 
 @media (max-width: 850px) {
     .service-page {
-        background-position: 62% center;
+        background-position: 92% center;    
     }
 
     .service-page .service-content {
@@ -398,7 +421,7 @@ nav, footer {
 @media (max-width: 600px) {
     .service-page {
         padding: 44px 20px 64px;
-        background-position: 70% center;
+        /* background-position: 70% center; */
     }
 
     .service-page::before {
@@ -415,10 +438,6 @@ nav, footer {
 
     .service-page .service-intro h1 {
         font-size: clamp(2.4rem, 12vw, 3.8rem);
-    }
-
-    .service-page .service-lead {
-        font-size: 1.1rem;
     }
 
     .service-page .service-description {

@@ -30,6 +30,9 @@ Foto de stardust multimedia: https://www.pexels.com/es-es/foto/una-mujer-con-un-
 
 CONTACTO
 Foto de Andrea De Santis: https://www.pexels.com/es-es/foto/vintage-radios-dispositivo-coleccion-14681924/
+Foto de Sharath G.: https://www.pexels.com/es-es/foto/radio-siemens-vintage-con-diseno-clasico-38252530/
+Foto de Shovan Datta: https://www.pexels.com/es-es/foto/blanco-y-negro-hombre-trabajando-acera-18533708/
+Foto de Sharath G.: https://www.pexels.com/es-es/foto/tienda-de-electronica-vintage-con-televisores-y-radios-antiguos-38252532/
 
 WEB DESIGN
 Foto de Anderson Portella: https://www.pexels.com/es-es/foto/acrobacia-graciosa-en-seda-aerea-realizando-en-brasil-30131215/

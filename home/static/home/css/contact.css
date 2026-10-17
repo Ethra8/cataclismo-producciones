@@ -5,9 +5,8 @@ body::before {
     width: 100vw;
     height: 100lvh;
     background: 
-        /* linear-gradient(rgba(63, 1, 1, 0.18), rgba(80, 0, 0, 0.32)), */
         linear-gradient(rgba(63, 1, 1, 0.18), rgba(80, 0, 0, 0.32)),
-        url("../images/vintage-radios-dispositivo-coleccion-14681924.jpg") center / cover no-repeat;
+        url("../images/blanco-y-negro-hombre-trabajando-acera-18533708.jpg") top 10% center / cover no-repeat;
     z-index: -1;
 }
 
@@ -19,7 +18,7 @@ body::before {
     font-family: "Roboto", Helvetica, sans-serif;
     overflow: hidden;
     background:
-        linear-gradient(rgba(7, 7, 7, 0.98), rgba(34, 34, 34, 0.72)),
+        linear-gradient(rgba(7, 7, 7, 0.98), rgba(34, 34, 34, 0.92)),
 }
 
 .contact-overlay {
@@ -48,25 +47,25 @@ body::before {
     width: 90%;
     margin: 0 auto;
     z-index: 1;
-    padding: 7%;
+    padding: 7% 7% 96px;
 }
 
 .contact-container::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(10, 10, 10, 0.78);
+    background: rgba(24, 1, 1, 0.84);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
 
     -webkit-mask-image:
-        linear-gradient(to right, transparent 0%, rgb(5 1 1 / 96%) 4%, rgb(13 2 2 / 96%) 96%, transparent 100%), 
-        linear-gradient(to bottom, transparent 0%, rgba(13, 2, 2, 0.96) 4%, rgba(5, 1, 1, 0.96) 96%, transparent 100%);        
+        linear-gradient(to right, transparent 0%, rgb(5 1 1 / 98%) 4%, rgb(13 2 2 / 98%) 96%, transparent 100%), 
+        linear-gradient(to bottom, transparent 0%, rgba(13, 2, 2, 0.98) 4%, rgba(5, 1, 1, 0.98) 96%, transparent 100%);        
     -webkit-mask-composite: source-in;
 
     mask-image: 
-        linear-gradient(to right, transparent 0%, rgb(5 1 1 / 96%) 4%, rgb(13 2 2 / 96%) 96%, transparent 100%), 
-        linear-gradient(to bottom, transparent 0%, rgba(13, 2, 2, 0.96) 4%, rgba(5, 1, 1, 0.96) 96%, transparent 100%);        
+        linear-gradient(to right, transparent 0%, rgb(5 1 1 / 98%) 4%, rgb(13 2 2 / 98%) 96%, transparent 100%), 
+        linear-gradient(to bottom, transparent 0%, rgba(13, 2, 2, 0.98) 4%, rgba(5, 1, 1, 0.98) 96%, transparent 100%);        
     mask-composite: intersect;
 
     z-index: -1;

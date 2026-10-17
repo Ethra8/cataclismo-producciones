@@ -11,17 +11,32 @@
 
 {% block nav %}
 <nav class="example-one-nav">
-    <a href="#" class="example-one-logo">
+    <a href="#home" class="example-one-logo">
         Arte de Seda
     </a>
 
     <div class="example-one-nav-links">
         <a href="#home">Inicio</a>
-        <a href="#about">Quienes somos</a>
-        <a href="#services">Shows</a>
-        <a href="#cursos">Cursos</a>
-        <a href="#work">Talleres</a>
+        <a href="#shows">Shows</a>
+        <a href="#cursos">Cursos & Talleres</a>
+        <a href="#about">Quiénes somos</a>
         <a href="#contact">Contacto</a>
+    </div>
+
+    <div class="mobile-nav example-one-mobile-nav">
+        <button class="mobile-menu-toggle menu-toggle" type="button" aria-expanded="false" aria-label="Abrir menú">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="mobile-menu example-one-mobile-menu">
+            <a href="#home">Inicio</a>
+            <a href="#shows">Shows</a>
+            <a href="#cursos">Cursos & Talleres</a>
+            <a href="#about">Quiénes somos</a>
+            <button href="#contact" class="contact-cta">Contacto</button>
+        </div>
     </div>
 </nav>
 {% endblock %}
@@ -59,11 +74,12 @@
             <div class="activities-overlay"></div>
 
         <div class="activities-content">
-            <p class="section-kicker">Nuestros Cursos</p>
+            <p class="section-kicker">Nuestros Cursos
+                <span>y Talleres</span>
+            </p>
 
             <h2>
-                Nos adaptamos
-                <span>al punto en el que estés</span>
+                Para todas las edades
             </h2>
 
             <p>

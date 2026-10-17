@@ -24,7 +24,7 @@ body::before {
     position: relative;
     min-height: 100svh;
     overflow: hidden;
-    padding: 64px 0 72px;
+    padding: 0;
     color: var(--color-white);
     background:
         url("../images/under_construction_proximamente.png") center / cover no-repeat;
@@ -37,10 +37,10 @@ body::before {
     justify-content: center;
     background: rgba(10, 10, 10, 0.45);
     width: 60%;
-    padding: 36px 5% 16px;
+    padding: 46px 5% 16px;
     box-shadow: 5px 5px 5px 10px rgba(10, 10, 10, 0.45);
     border-radius: 4px;
-    margin: 40px 0 27px auto;
+    margin: 4% 0 27px auto;
     backdrop-filter: blur(6px);
 }
 
@@ -64,9 +64,7 @@ body::before {
     overflow: visible;
     color: #d33333;
     isolation: isolate;
-    text-shadow:
-        0 0 10px rgba(211, 51, 51, 0.22),
-        0 0 22px rgba(211, 51, 51, 0.14);
+    text-shadow: 2px 3px 4px rgba(0, 0, 0, 0.75);
 }
 
 .home-page h1 .title-glitch::before,
@@ -452,8 +450,36 @@ body::before {
 
 
 /*** RESPONSIVE ***************************************************************/
+@media (max-width: 1399.98px) {
+    body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100lvh;
+        background: url("../images/under_construction_proximamente.png") no-repeat top left;
+        /* background-size: cover; */
+        z-index: -1;
+    }
+
+    .home-page {
+        background:
+            url("../images/under_construction_proximamente.png");
+    }
+
+    .home-header {
+        width: 70%;
+    }
+
+}
+
 
 @media (max-width: 1200px) {
+    .home-header {
+        width: 75%;
+    }
+
     .contact-form {
         gap: 0.5rem;
     }
@@ -467,6 +493,10 @@ body::before {
 
 
 @media (max-width: 1099.98px) {
+    .home-header {
+        width: 78%;
+    }
+
     .home-page h1 {
         font-size: 3em;
     }
@@ -508,7 +538,6 @@ body::before {
         background:
             url("") center / cover no-repeat;
     }
-
 
     .home-header {
         padding: 36px 20px 6px;

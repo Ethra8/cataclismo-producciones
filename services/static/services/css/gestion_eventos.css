@@ -3,8 +3,10 @@
    ========================================================= */
 body {
     position: relative;
-    background: none;
+    /* background: none; */
+    background-color: rgba(10, 10, 10, 0.75);
 }
+
 body::before {
     content: "";
     position: fixed;
@@ -12,7 +14,12 @@ body::before {
     left: 0;
     width: 100vw;
     height: 100lvh;
-    background: url("../images/gestion_eventos/blanco-y-negro-gente-luces-festival.jpg") center center repeat;
+    background: 
+        linear-gradient(
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.55)
+        ),
+        url("../images/gestion_eventos/manos-fiesta-partido-multitud.jpg") center center repeat;
     background-size: cover;
     z-index: -1;
 }
@@ -108,7 +115,7 @@ body::before {
     display: flex;
     align-items: center;
     background:
-        url("../images/gestion_eventos/blanco-y-negro-gente-luces-festival.jpg")
+        url("../images/gestion_eventos/manos-fiesta-partido-multitud.jpg")
         center center / cover no-repeat;
     overflow: hidden;
 }

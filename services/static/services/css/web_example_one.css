@@ -147,7 +147,7 @@ nav {
             rgba(0, 0, 0, 0.88) 40%,
             rgba(0, 0, 0, 0.55) 68%,
             rgba(0, 0, 0, 0.28) 100%
-        ),
+        );
 }
 
 .web-example-one-page img {
@@ -155,19 +155,9 @@ nav {
     width: 100%;
 }
 
-.section-dark {
+/* .section-dark {
     background: var(--color-black);
-}
-
-.section-kicker {
-    margin: 0 0 12px;
-    color: var(--color-red-bright);
-    font-family: "Explora", sans-serif;
-    font-size: clamp(2.3em, 12vw, 5em);
-    font-weight: 600;
-    letter-spacing: 0.02em;
-    text-transform: capitalize;
-}
+}*/
 
 .web-example-one-page h1 {
     font-family: "Comforter", cursive;
@@ -223,7 +213,6 @@ nav {
         url("../images/web_example_one/acrobata_entre_humo_y_terciopelo_rojizo_mirrored.png")
         top left / cover no-repeat;
     overflow: hidden;
-    zoom: 95%;
 }
 
 .hero-overlay {
@@ -454,12 +443,18 @@ nav {
 .activities-content .section-kicker {
     color: var(--color-black);
     line-height: 0.8;
+    margin: 0 0 12px;
+    font-family: "Explora", sans-serif;
+    font-size: clamp(2.3em, 12vw, 5em);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    /* text-transform: capitalize; */
 }
 
-.activities-content .section-kicker span {
+/* .activities-content .section-kicker span {
     text-transform: none;
     display: block;
-}
+} */
 
 .activities-content h2 {
     margin-bottom: 22px;
@@ -603,13 +598,12 @@ nav {
     }
 
     .hero-overlay {
-        background:
+        background: 
             linear-gradient(
-                180deg,
-                rgba(0, 0, 0, 0.46) 0%,
-                rgba(0, 0, 0, 0.68) 42%,
-                rgba(0, 0, 0, 0.94) 100%
-            );
+                180deg, 
+                rgba(0, 0, 0, 0.06) 0%, 
+                rgba(0, 0, 0, 0.48) 42%, 
+                rgba(0, 0, 0, 0.94) 100%);    
     }
 
     .hero-content {

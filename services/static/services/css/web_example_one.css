@@ -234,7 +234,7 @@ nav {
     z-index: 1;
     width: min(100%, 1600px);
     margin: 0 auto;
-    padding: 55vh 5vw 80px;
+    padding: 55vh 10% 7vh;
 }
 
 .hero-lead {

@@ -26,6 +26,7 @@ body::before {
 
 nav {
     background-color: rgba(10, 10, 10, .75);
+    min-height: 66px;
 }
 
 /* hr {
@@ -239,7 +240,7 @@ nav {
 
 .hero-lead {
     margin: 0;
-    padding: 1em 0 0;
+    padding: 1em 0 0 1em;    
     text-align: right;
     font-family: "Explora", serif;
     font-size: clamp(2.7rem, 3vw, 3.8rem);

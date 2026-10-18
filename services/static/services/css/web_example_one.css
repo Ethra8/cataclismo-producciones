@@ -250,6 +250,7 @@ nav {
 
 .hero-lead {
     margin: 0;
+    padding: 1em 0 0;
     text-align: right;
     font-family: "Explora", serif;
     font-size: clamp(2.7rem, 3vw, 3.8rem);

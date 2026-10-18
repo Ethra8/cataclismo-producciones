@@ -171,11 +171,11 @@ nav {
 
 .web-example-one-page h1 {
     font-family: "Comforter", cursive;
-    font-size: clamp(2.3em, 14vw, 9em);
+    font-size: clamp(4em, 14vw, 9em);
     line-height: 0.6;
     font-weight: 500;
     width: max-content;
-    margin-left: auto;
+    margin: 0 0 0 auto;
 }
 
 .web-example-one-page h1,
@@ -248,14 +248,14 @@ nav {
     padding: 55vh 5vw 80px;
 }
 
-.hero-lead {
-    margin: 2.1em 0 0;
+hero-lead {
+    margin: 1.1em 0 0;
     text-align: right;
     font-family: "Explora", serif;
     font-size: clamp(2.7rem, 3vw, 3.8rem);
-    font-weight: 500;
-    line-height: 0.5;
-    letter-spacing: 0.05em;
+    font-weight: 600;
+    line-height: 0.95;
+    letter-spacing: 0.15em;
 }
 
 .hero-summary {

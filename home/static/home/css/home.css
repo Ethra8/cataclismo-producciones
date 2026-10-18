@@ -26,8 +26,6 @@ body::before {
     overflow: hidden;
     padding: 0;
     color: var(--color-white);
-    background:
-        url("../images/under_construction_proximamente.png") center / cover no-repeat;
 }
 
 .home-header {
@@ -36,9 +34,18 @@ body::before {
     align-items: flex-end;
     justify-content: center;
     background: rgba(10, 10, 10, 0.45);
-    width: 60%;
-    padding: 46px 5% 16px;
-    box-shadow: 5px 5px 5px 10px rgba(10, 10, 10, 0.45);
+    max-width: 70%;
+    padding: 46px 5% 16px 7%;
+    background: linear-gradient(
+        to right,
+        rgba(10, 10, 10, 0) 0%,
+        rgba(10, 10, 10, 0.18) 20%,
+        rgba(10, 10, 10, 0.38) 45%,
+        rgba(10, 10, 10, 0.58) 75%,
+        rgba(10, 10, 10, 0.68) 100%
+    );
+
+    box-shadow: 8px 8px 18px rgba(10, 10, 10, 0.18);    
     border-radius: 4px;
     margin: 4% 0 27px auto;
     backdrop-filter: blur(6px);
@@ -48,12 +55,12 @@ body::before {
     color: var(--color-white);
     text-align: right;
     font-family: "Zen Dots", sans-serif;
-    font-size: clamp(2.8rem, 5.4vw, 5.5rem);
+    font-size: clamp(2.1rem, 5.4vw, 5.5rem);
     font-weight: 400;
     line-height: 1.03;
     letter-spacing: 0.02em;
     text-shadow: 2px 3px 4px rgba(0, 0, 0, 0.75);
-    margin: 0 0 0.5em;
+    margin: 0;
 }
 
 .home-page h1 .title-glitch {
@@ -225,7 +232,7 @@ body::before {
     color: var(--color-white);
     text-align: right;
     font-family: "Iceland", sans-serif;
-    font-size: 2em;
+    font-size: 1.65em;
     font-weight: 400;
     line-height: 1.2em;
     margin: 0;
@@ -237,16 +244,19 @@ body::before {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    background: rgba(143, 37, 37, 0.75);
+    background: linear-gradient(
+        135deg, 
+        rgb(199 69 69 / 80%), 
+        rgba(25, 10, 10, .92));
     border: 1px solid rgba(255, 255, 255, 0.18);
     border-radius: 4px;
-    backdrop-filter: blur(6px);
+    backdrop-filter: blur(8px);
     width: 40%;
 }
 
 .contact-form h2 {
     color: rgb(211, 209, 209);
-    text-align: center;
+    text-align: left;
     font-family: "Zen Dots", sans-serif;
     font-size: 1.5em;
     font-weight: 400;
@@ -254,6 +264,10 @@ body::before {
     text-shadow: 2px 3px 4px rgba(0, 0, 0, 0.75);
     margin: 0;
     line-height: 1.2em;
+}
+
+.contact-form h2 span {
+    display: block;
 }
 
 .contact-form-grid {
@@ -450,38 +464,12 @@ body::before {
 
 
 /*** RESPONSIVE ***************************************************************/
-@media (max-width: 1399.98px) {
-    body::before {
-        content: "";
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100lvh;
-        background: url("../images/under_construction_proximamente.png") no-repeat top left;
-        /* background-size: cover; */
-        z-index: -1;
-    }
-
-    .home-page {
-        background:
-            url("../images/under_construction_proximamente.png");
-    }
-
-    .home-header {
-        width: 70%;
-    }
-
-}
-
 
 @media (max-width: 1200px) {
-    .home-header {
-        width: 75%;
-    }
-
     .contact-form {
         gap: 0.5rem;
+        width: 50%;
+        margin: 180px 5% 46px auto;
     }
 
     .contact-form-grid {
@@ -494,17 +482,12 @@ body::before {
 
 @media (max-width: 1099.98px) {
     .home-header {
-        width: 78%;
-    }
-
-    .home-page h1 {
-        font-size: 3em;
+        max-width: 78%;
+        margin-right: 5%;
     }
 
     .contact-form {
-        width: 70%;
-        max-width: 460px;
-        margin: 140px 5% 46px auto;
+        max-width: 78%;
     }
 
 }
@@ -513,16 +496,6 @@ body::before {
 @media (max-width: 992px) {
     body::before {
         background-position: top left;
-    }
-
-    .home-page h1 {
-        font-size: 2.7em;
-    }
-
-    .contact-form {
-        width: 80%;
-        max-width: 420px;
-        margin: 180px 5% 46px auto;
     }
 }
 
@@ -534,19 +507,17 @@ body::before {
         background-size: cover;
     }
 
-    .home-page {
-        background:
-            url("") center / cover no-repeat;
-    }
-
     .home-header {
         padding: 36px 20px 6px;
         margin: 310px 0 27px auto;
         width: 100%;
+        max-width: none;
     }
 
-    .home-page h1 {
-        font-size: 3em;
+    .contact-form {
+        width: 70%;
+        max-width: none;
+        margin: 46px auto;
     }
 
     .photo-credit,
@@ -557,26 +528,9 @@ body::before {
 }
 
 
-@media (max-width: 667.98px) {
-    .home-page h1 {
-        font-size: 2.7em;
-    }
-
-    .contact-form {
-        max-width: 400px;
-        margin: 200px 5% 46px auto;
-    }
-}
-
-
 @media (max-width: 566.98px) {
-    .home-page h1 {
-        font-size: 2.5em;
-    }
-
     .contact-form {
-        width: 95%;
-        max-width: 95%;
+        width: 80%;
         margin: 16px auto 60px;
     }
 
@@ -585,26 +539,31 @@ body::before {
 
 @media (max-width: 456px) {
     .home-header {
-        margin: 69% 0 27px auto;
+        margin: 69% 0 27px;
+        min-width: 100%;
     }
 
-    .home-page h1 {
-        font-size: 2em;
+    .home-header h1 {
+        font-weight: 600;
+    }
+
+    .contact-form {
+        width: 90%;
     }
 
     .contact-form h2 {
         font-size: 1.2em;
     }
 
-    .home-page header p {
-        font-size: 1.2em;
-        margin: 0 5%;
-    }
 }
 
 
-@media (max-width: 362px) {
+@media (max-width: 370.98px) {
+    .home-header {
+        margin: 76% 0 27px;    
+    }
+
     .photo-credit {
-        font-size: 0.5em;
+        font-size: 0.65em;
     }
 }

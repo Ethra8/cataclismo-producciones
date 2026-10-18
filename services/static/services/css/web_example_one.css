@@ -28,6 +28,12 @@ nav {
     background-color: rgba(10, 10, 10, .75);
 }
 
+/* hr {
+    border: 2px solid rgba(251, 175, 85);
+    width: 60%;
+    margin: 0 0 0 auto;
+} */
+
 .example-one-logo {
     font-family: "Comforter", cursive;
     text-decoration: none;
@@ -47,7 +53,8 @@ nav {
 }
 
 .example-one-nav-links a:hover {
-    border-bottom: 2px solid var(--color-red);
+    border-bottom: 2px solid rgba(251, 175, 85);
+    border-radius: 99px;
     margin-bottom: 4px;
     padding-bottom: 0.1em;
     width: fit-content;
@@ -58,6 +65,10 @@ nav {
 .mobile-nav {
     position: relative;
     flex-shrink: 0;
+}
+
+.mobile-menu-toggle.menu-toggle span {
+    border-color: rgba(251, 175, 85);
 }
 
 .mobile-menu.example-one-mobile-menu {
@@ -210,8 +221,9 @@ nav {
     align-items: center;
     background:
         url("../images/web_example_one/acrobata_entre_humo_y_terciopelo_rojizo_mirrored.png")
-        top center / cover no-repeat;
+        top left / cover no-repeat;
     overflow: hidden;
+    zoom: 95%;
 }
 
 .hero-overlay {
@@ -222,8 +234,8 @@ nav {
             90deg,
             rgba(0, 0, 0, 0.12) 0%,
             rgba(0, 0, 0, 0.22) 38%,
-            rgba(0, 0, 0, 0.72) 72%,
-            rgba(0, 0, 0, 0.92) 100%
+            rgba(0, 0, 0, 0.42) 72%,
+            rgba(0, 0, 0, 0.72) 100%
         );
 }
 
@@ -233,7 +245,7 @@ nav {
     z-index: 1;
     width: min(100%, 1600px);
     margin: 0 auto;
-    padding: 140px 5vw 80px;
+    padding: 55vh 5vw 80px;
 }
 
 .hero-lead {
@@ -472,9 +484,9 @@ nav {
     min-height: 360px;
     display: flex;
     align-items: center;
-    background:
+    /* background:
         url("../images/gestion_eventos/publico-vintage-en-asientos-de-teatro.jpg")
-        center 58% / cover no-repeat;
+        center 58% / cover no-repeat; */
     overflow: hidden;
 }
 

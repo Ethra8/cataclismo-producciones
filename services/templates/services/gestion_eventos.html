@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block title %}Producción y gestión de eventos | Cataclismo Producciones{% endblock %}
+{% block title %}Producción y gestión de eventos | {% endblock %}
 
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'css/title_glitch.css' %}">
@@ -42,6 +42,177 @@
                 <span aria-hidden="true">→</span>
             </a>
         </div>
+    </section>
+
+    <!-- AUDIENCE -->
+    <section class="event-audience">
+
+        <div class="event-audience-grid">
+
+            <div class="audience-item">
+                <span class="audience-icon" aria-hidden="true">♫</span>
+                <p>Proyectos culturales y musicales</p>
+            </div>
+
+            <div class="audience-item">
+                <span class="audience-icon" aria-hidden="true">◎</span>
+                <p>Promotores</p>
+            </div>
+
+            <div class="audience-item">
+                <span class="audience-icon" aria-hidden="true">⌖</span>
+                <p>Salas y espacios culturales</p>
+            </div>
+
+            <div class="audience-item">
+                <span class="audience-icon" aria-hidden="true">▥</span>
+                <p>Asociaciones</p>
+            </div>
+
+            <div class="audience-item">
+                <span class="audience-icon" aria-hidden="true">▦</span>
+                <p>Ayuntamientos y organizaciones</p>
+            </div>
+
+            <div class="audience-item">
+                <span class="audience-icon" aria-hidden="true">◇</span>
+                <p>Proyectos creativos</p>
+            </div>
+
+        </div>
+        <div class="event-audience-heading">
+            <p class="section-kicker">Trabajamos con</p>
+
+            <h2>
+                Proyectos diversos,
+                <span>un mismo enfoque</span>
+            </h2>
+        </div>
+
+    </section>
+
+
+    <!-- PROCESS -->
+    <section class="event-process section-dark">
+
+        <div class="section-heading">
+            <div>
+                <p class="section-kicker">Cómo trabajamos</p>
+
+                <h2>
+                    Un proceso 
+                    <span>adaptado a tu proyecto</span>
+                </h2>
+            </div>
+        </div>
+
+        <div class="event-process-grid">
+
+            <article class="process-card">
+                <div class="process-card-header">
+                    <span class="process-number">01</span>
+                    <img src="{% static 'icons/arrow-right-red.png' %}" class="arrow" alt="" aria-hidden="true" width="42">
+                </div>
+
+                <img
+                    src="{% static 'services/images/gestion_eventos/event_planning.png' %}"
+                    alt="Planificación de producción de un evento"
+                    loading="lazy"
+                >
+
+                <h3>Cuéntanos el proyecto</h3>
+
+                <p>
+                    Entendemos el formato, las necesidades y el punto de partida.
+                </p>
+            </article>
+
+            <article class="process-card">
+                <div class="process-card-header">
+                    <span class="process-number">02</span>
+                    <img src="{% static 'icons/arrow-right-red.png' %}" class="arrow" alt="" aria-hidden="true" width="42">
+                </div>
+
+                <img
+                    src="{% static 'services/images/gestion_eventos/event_production_plan.png' %}"
+                    alt="Planificación técnica y logística de un evento"
+                    loading="lazy"
+                >
+
+                <h3>Diseñamos la producción</h3>
+
+                <p>
+                    Definimos tareas, calendario, recursos y coordinación.
+                </p>
+            </article>
+
+            <article class="process-card">
+                <div class="process-card-header">
+                    <span class="process-number">03</span>
+                    <img src="{% static 'icons/arrow-right-red.png' %}" class="arrow" alt="" aria-hidden="true" width="42">
+                </div>
+
+                <img
+                    src="{% static 'services/images/gestion_eventos/event_backstage.png' %}"
+                    alt="Equipo de producción trabajando entre bastidores"
+                    loading="lazy"
+                >
+
+                <h3>Lo ponemos en marcha</h3>
+
+                <p>
+                    Gestionamos las partes implicadas y hacemos seguimiento.
+                </p>
+            </article>
+
+            <article class="process-card">
+                <div class="process-card-header">
+                    <span class="process-number">04</span>
+                    <img src="{% static 'icons/check-red.png' %}" class="arrow" alt="" aria-hidden="true" width="42">
+                </div>
+
+                <img
+                    src="{% static 'services/images/gestion_eventos/multitud-muchedumbre-concierto-destacar.jpg' %}"
+                    alt="Concierto en directo durante un evento"
+                    loading="lazy"
+                >
+
+                <h3>Llega el evento</h3>
+
+                <p>
+                    Coordinamos la ejecución para que todo encaje.
+                </p>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- FLEXIBILITY -->
+    <section class="event-flexibility">
+            <div class="event-flexibility-overlay"></div>
+        <div class="event-flexibility-image">
+            <img
+                src="{% static 'services/images/gestion_eventos/blanco-y-negro-hombre-noche-oscuro-19312545.jpg' %}"
+                alt="Material técnico preparado para producción de eventos"
+                loading="lazy"
+            >
+        </div>
+
+        <div class="event-flexibility-content">
+            <p class="section-kicker">Flexibilidad</p>
+
+            <h2>
+                Nos adaptamos
+                <span>al punto en el que estés</span>
+            </h2>
+
+            <p>
+                Podemos incorporarnos a un
+                proyecto que ya está en marcha para gestionar únicamente las áreas
+                que necesites.
+            </p>
+        </div>
+
     </section>
 
     <!-- WHAT WE DO -->
@@ -135,175 +306,6 @@
         </div>
     </section>
 
-    <!-- AUDIENCE -->
-    <section class="event-audience">
-
-        <div class="event-audience-heading">
-            <p class="section-kicker">Trabajamos con</p>
-
-            <h2>
-                Proyectos diversos,
-                <span>un mismo enfoque</span>
-            </h2>
-        </div>
-
-        <div class="event-audience-grid">
-
-            <div class="audience-item">
-                <span class="audience-icon" aria-hidden="true">♫</span>
-                <p>Proyectos culturales y musicales</p>
-            </div>
-
-            <div class="audience-item">
-                <span class="audience-icon" aria-hidden="true">◎</span>
-                <p>Promotores</p>
-            </div>
-
-            <div class="audience-item">
-                <span class="audience-icon" aria-hidden="true">⌖</span>
-                <p>Salas y espacios culturales</p>
-            </div>
-
-            <div class="audience-item">
-                <span class="audience-icon" aria-hidden="true">▥</span>
-                <p>Asociaciones</p>
-            </div>
-
-            <div class="audience-item">
-                <span class="audience-icon" aria-hidden="true">▦</span>
-                <p>Ayuntamientos y organizaciones</p>
-            </div>
-
-            <div class="audience-item">
-                <span class="audience-icon" aria-hidden="true">◇</span>
-                <p>Proyectos creativos</p>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- PROCESS -->
-    <section class="event-process section-dark">
-
-        <div class="section-heading">
-            <div>
-                <p class="section-kicker">Cómo trabajamos</p>
-
-                <h2>
-                    Un proceso 
-                    <span>adaptado a tu proyecto</span>
-                </h2>
-            </div>
-        </div>
-
-        <div class="event-process-grid">
-
-            <article class="process-card">
-                <div class="process-card-header">
-                    <span class="process-number">01</span>
-                    <span class="process-arrow" aria-hidden="true">→</span>
-                </div>
-
-                <img
-                    src="{% static 'services/images/gestion_eventos/event_planning.png' %}"
-                    alt="Planificación de producción de un evento"
-                    loading="lazy"
-                >
-
-                <h3>Cuéntanos el proyecto</h3>
-
-                <p>
-                    Entendemos el formato, las necesidades y el punto de partida.
-                </p>
-            </article>
-
-            <article class="process-card">
-                <div class="process-card-header">
-                    <span class="process-number">02</span>
-                    <span class="process-arrow" aria-hidden="true">→</span>
-                </div>
-
-                <img
-                    src="{% static 'services/images/gestion_eventos/event_production_plan.png' %}"
-                    alt="Planificación técnica y logística de un evento"
-                    loading="lazy"
-                >
-
-                <h3>Diseñamos la producción</h3>
-
-                <p>
-                    Definimos tareas, calendario, recursos y coordinación.
-                </p>
-            </article>
-
-            <article class="process-card">
-                <div class="process-card-header">
-                    <span class="process-number">03</span>
-                    <span class="process-arrow" aria-hidden="true">→</span>
-                </div>
-
-                <img
-                    src="{% static 'services/images/gestion_eventos/event_backstage.png' %}"
-                    alt="Equipo de producción trabajando entre bastidores"
-                    loading="lazy"
-                >
-
-                <h3>Lo ponemos en marcha</h3>
-
-                <p>
-                    Gestionamos las partes implicadas y hacemos seguimiento.
-                </p>
-            </article>
-
-            <article class="process-card">
-                <div class="process-card-header">
-                    <span class="process-number">04</span>
-                    <span class="process-arrow" aria-hidden="true">→</span>
-                </div>
-
-                <img
-                    src="{% static 'services/images/gestion_eventos/multitud-muchedumbre-concierto-destacar.jpg' %}"
-                    alt="Concierto en directo durante un evento"
-                    loading="lazy"
-                >
-
-                <h3>Llega el evento</h3>
-
-                <p>
-                    Coordinamos la ejecución para que todo encaje.
-                </p>
-            </article>
-
-        </div>
-    </section>
-
-    <!-- FLEXIBILITY -->
-    <section class="event-flexibility">
-            <div class="event-flexibility-overlay"></div>
-        <div class="event-flexibility-image">
-            <img
-                src="{% static 'services/images/gestion_eventos/blanco-y-negro-hombre-noche-oscuro-19312545.jpg' %}"
-                alt="Material técnico preparado para producción de eventos"
-                loading="lazy"
-            >
-        </div>
-
-        <div class="event-flexibility-content">
-            <p class="section-kicker">Flexibilidad</p>
-
-            <h2>
-                Nos adaptamos
-                <span>al punto en el que estés</span>
-            </h2>
-
-            <p>
-                Podemos encargarnos de la producción completa o incorporarnos a un
-                proyecto que ya está en marcha para gestionar únicamente las áreas
-                que necesites.
-            </p>
-        </div>
-
-    </section>
 
     <!-- FINAL CTA -->
     <section class="event-final-cta">
